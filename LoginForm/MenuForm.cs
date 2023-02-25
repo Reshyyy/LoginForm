@@ -14,6 +14,7 @@ namespace LoginForm
     {
         public MenuForm()
         {
+
             InitializeComponent();
         }
 
@@ -40,5 +41,28 @@ namespace LoginForm
             Returned returned = new Returned();
             returned.ShowDialog();
         }
+
+        private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DialogResult res;
+            res = MessageBox.Show("Are you sure you want to logout?", "Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (res == DialogResult.Yes)
+            {
+                this.Close();
+                LoginForm lf = new LoginForm();
+                lf.ShowDialog();
+            }
+            else
+            {
+                this.Show();
+            }
+        }
+
+        private void MenuForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

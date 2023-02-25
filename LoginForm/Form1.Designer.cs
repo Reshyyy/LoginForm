@@ -1,6 +1,6 @@
 ﻿namespace LoginForm
 {
-    partial class Form1
+    partial class LoginForm
     {
         /// <summary>
         ///  Required designer variable.
@@ -116,6 +116,7 @@
             // 
             this.txtPassword.Location = new System.Drawing.Point(198, 84);
             this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(218, 23);
             this.txtPassword.TabIndex = 11;
             // 
@@ -207,6 +208,7 @@
             // 
             this.txtRegPassword.Location = new System.Drawing.Point(198, 83);
             this.txtRegPassword.Name = "txtRegPassword";
+            this.txtRegPassword.PasswordChar = '*';
             this.txtRegPassword.Size = new System.Drawing.Size(218, 23);
             this.txtRegPassword.TabIndex = 18;
             this.txtRegPassword.TextChanged += new System.EventHandler(this.txtRegPassword_TextChanged);
@@ -224,6 +226,7 @@
             // 
             this.txtRegCPassword.Location = new System.Drawing.Point(198, 124);
             this.txtRegCPassword.Name = "txtRegCPassword";
+            this.txtRegCPassword.PasswordChar = '*';
             this.txtRegCPassword.Size = new System.Drawing.Size(218, 23);
             this.txtRegCPassword.TabIndex = 20;
             this.txtRegCPassword.TextChanged += new System.EventHandler(this.txtRegCPassword_TextChanged);
@@ -243,21 +246,22 @@
             this.panel_Register.Size = new System.Drawing.Size(511, 243);
             this.panel_Register.TabIndex = 11;
             // 
-            // Form1
+            // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::LoginForm.Properties.Resources.lain_kobeni_bg;
             this.ClientSize = new System.Drawing.Size(581, 405);
-            this.Controls.Add(this.panel_Register);
             this.Controls.Add(this.panel_Login);
+            this.Controls.Add(this.panel_Register);
             this.Controls.Add(this.btnRegisterForm);
             this.Controls.Add(this.btnLoginForm);
             this.Controls.Add(this.lblWelcome);
             this.Controls.Add(this.btnClearForm);
             this.Controls.Add(this.btnExitForm);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "LoginForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "LoginForm";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel_Login.ResumeLayout(false);
             this.panel_Login.PerformLayout();

@@ -4,9 +4,9 @@ using System.Data;
 
 namespace LoginForm
 {
-    public partial class Form1 : Form
+    public partial class LoginForm : Form
     {
-        public Form1()
+        public LoginForm()
         {
             InitializeComponent();
         }
@@ -43,7 +43,8 @@ namespace LoginForm
                 {
                     MessageBox.Show("Login Success", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     MenuForm main = new MenuForm();
-                    main.ShowDialog();
+                    main.Show();
+                    this.Hide();
                 }
                 else
                 {
@@ -107,17 +108,7 @@ namespace LoginForm
 
         private void btnExitForm_Click(object sender, EventArgs e)
         {
-            DialogResult res;
-            res = MessageBox.Show("Are you sure you want to exit?", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-            if (res == DialogResult.Yes)
-            {
-                Application.Exit();
-            }
-            else
-            {
-                this.Show();
-            }
+            Application.Exit();
         }
 
         private void txtRegPassword_TextChanged(object sender, EventArgs e)
