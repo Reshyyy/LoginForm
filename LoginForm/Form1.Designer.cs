@@ -54,37 +54,44 @@
             // lblWelcome
             // 
             this.lblWelcome.AutoSize = true;
-            this.lblWelcome.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblWelcome.Location = new System.Drawing.Point(240, 9);
+            this.lblWelcome.BackColor = System.Drawing.Color.Transparent;
+            this.lblWelcome.Font = new System.Drawing.Font("Lucida Calligraphy", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblWelcome.ForeColor = System.Drawing.Color.SlateBlue;
+            this.lblWelcome.Location = new System.Drawing.Point(214, 15);
             this.lblWelcome.Name = "lblWelcome";
-            this.lblWelcome.Size = new System.Drawing.Size(103, 30);
+            this.lblWelcome.Size = new System.Drawing.Size(169, 41);
             this.lblWelcome.TabIndex = 0;
             this.lblWelcome.Text = "Welcome";
             // 
             // btnLoginForm
             // 
+            this.btnLoginForm.BackColor = System.Drawing.Color.MediumPurple;
             this.btnLoginForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLoginForm.Location = new System.Drawing.Point(31, 57);
+            this.btnLoginForm.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnLoginForm.Location = new System.Drawing.Point(32, 71);
             this.btnLoginForm.Name = "btnLoginForm";
             this.btnLoginForm.Size = new System.Drawing.Size(138, 52);
             this.btnLoginForm.TabIndex = 8;
             this.btnLoginForm.Text = "LOGIN";
-            this.btnLoginForm.UseVisualStyleBackColor = true;
+            this.btnLoginForm.UseVisualStyleBackColor = false;
             this.btnLoginForm.Click += new System.EventHandler(this.btnLoginForm_Click);
             // 
             // btnRegisterForm
             // 
+            this.btnRegisterForm.BackColor = System.Drawing.Color.Plum;
             this.btnRegisterForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegisterForm.Location = new System.Drawing.Point(185, 57);
+            this.btnRegisterForm.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnRegisterForm.Location = new System.Drawing.Point(176, 71);
             this.btnRegisterForm.Name = "btnRegisterForm";
             this.btnRegisterForm.Size = new System.Drawing.Size(138, 52);
             this.btnRegisterForm.TabIndex = 9;
             this.btnRegisterForm.Text = "REGISTER";
-            this.btnRegisterForm.UseVisualStyleBackColor = true;
+            this.btnRegisterForm.UseVisualStyleBackColor = false;
             this.btnRegisterForm.Click += new System.EventHandler(this.btnRegisterForm_Click);
             // 
             // panel_Login
             // 
+            this.panel_Login.BackColor = System.Drawing.Color.Tan;
             this.panel_Login.Controls.Add(this.btnLogin);
             this.panel_Login.Controls.Add(this.txtPassword);
             this.panel_Login.Controls.Add(this.txtUsername);
@@ -97,7 +104,7 @@
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(246, 123);
+            this.btnLogin.Location = new System.Drawing.Point(249, 122);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(84, 38);
             this.btnLogin.TabIndex = 13;
@@ -107,14 +114,14 @@
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(195, 76);
+            this.txtPassword.Location = new System.Drawing.Point(198, 84);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(218, 23);
             this.txtPassword.TabIndex = 11;
             // 
             // txtUsername
             // 
-            this.txtUsername.Location = new System.Drawing.Point(195, 33);
+            this.txtUsername.Location = new System.Drawing.Point(198, 46);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(218, 23);
             this.txtUsername.TabIndex = 10;
@@ -122,7 +129,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(82, 84);
+            this.label1.Location = new System.Drawing.Point(127, 86);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(57, 15);
             this.label1.TabIndex = 9;
@@ -131,7 +138,7 @@
             // lblUsername
             // 
             this.lblUsername.AutoSize = true;
-            this.lblUsername.Location = new System.Drawing.Point(81, 36);
+            this.lblUsername.Location = new System.Drawing.Point(127, 50);
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Size = new System.Drawing.Size(60, 15);
             this.lblUsername.TabIndex = 8;
@@ -139,22 +146,26 @@
             // 
             // btnExitForm
             // 
-            this.btnExitForm.Location = new System.Drawing.Point(458, 71);
+            this.btnExitForm.BackColor = System.Drawing.Color.IndianRed;
+            this.btnExitForm.ForeColor = System.Drawing.Color.White;
+            this.btnExitForm.Location = new System.Drawing.Point(458, 85);
             this.btnExitForm.Name = "btnExitForm";
             this.btnExitForm.Size = new System.Drawing.Size(84, 38);
             this.btnExitForm.TabIndex = 14;
             this.btnExitForm.Text = "Exit";
-            this.btnExitForm.UseVisualStyleBackColor = true;
+            this.btnExitForm.UseVisualStyleBackColor = false;
             this.btnExitForm.Click += new System.EventHandler(this.btnExitForm_Click);
             // 
             // btnClearForm
             // 
-            this.btnClearForm.Location = new System.Drawing.Point(366, 71);
+            this.btnClearForm.BackColor = System.Drawing.Color.LightBlue;
+            this.btnClearForm.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.btnClearForm.Location = new System.Drawing.Point(368, 85);
             this.btnClearForm.Name = "btnClearForm";
             this.btnClearForm.Size = new System.Drawing.Size(84, 38);
             this.btnClearForm.TabIndex = 12;
             this.btnClearForm.Text = "Clear";
-            this.btnClearForm.UseVisualStyleBackColor = true;
+            this.btnClearForm.UseVisualStyleBackColor = false;
             this.btnClearForm.Click += new System.EventHandler(this.button3_Click);
             // 
             // btnRegister
@@ -219,6 +230,7 @@
             // 
             // panel_Register
             // 
+            this.panel_Register.BackColor = System.Drawing.Color.Tan;
             this.panel_Register.Controls.Add(this.txtRegCPassword);
             this.panel_Register.Controls.Add(this.lblRegCPassword);
             this.panel_Register.Controls.Add(this.txtRegPassword);
@@ -235,6 +247,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::LoginForm.Properties.Resources.lain_kobeni_bg;
             this.ClientSize = new System.Drawing.Size(581, 405);
             this.Controls.Add(this.panel_Register);
             this.Controls.Add(this.panel_Login);

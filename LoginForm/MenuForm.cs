@@ -16,5 +16,29 @@ namespace LoginForm
         {
             InitializeComponent();
         }
+
+        private void booksToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Books books = new Books();
+            books.ShowDialog();
+        }
+
+        private void borrowerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Borrower borrower = new Borrower();
+            borrower.ShowDialog();
+        }
+
+        private void borrowedToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Borrowed borrowed = new Borrowed();
+            borrowed.ShowDialog();
+        }
+
+        private void returnedToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Returned returned = new Returned();
+            returned.ShowDialog();
+        }
     }
 }
