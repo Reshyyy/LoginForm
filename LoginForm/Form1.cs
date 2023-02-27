@@ -1,27 +1,21 @@
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Data;
+//using System.Data.OleDb;
 
 namespace LoginForm
 {
     public partial class LoginForm : Form
     {
+
         public LoginForm()
         {
             InitializeComponent();
+            //conn = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\\3rd Year\\2nd Sem\\DB SYS 2\\LAB\\LoginForm\\bin\\Debug\\LibSys.mdb");
+            //OleDbCommand cmd = new OleDbCommand();
+            //OleDbDataAdapter da = new OleDbDataAdapter();
         }
         SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-UOSHB5L;Initial Catalog=LoginFormTest;Integrated Security=True");
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblUsername_Click(object sender, EventArgs e)
-        {
-
-        }
-
 
 
         private void btnLogin_Click_1(object sender, EventArgs e)
@@ -31,6 +25,8 @@ namespace LoginForm
             conn.Open();
             SqlCommand cmd = new SqlCommand("select * from tblUserRegistration where UserName='" + txtUsername.Text + "'", conn);
             SqlDataReader sdr = cmd.ExecuteReader();
+            //OleDbCommand cmd = new OleDbCommand("select * from tblUser where UserName='" + txtUsername.Text + "'", conn);
+            //OleDbDataReader sdr = cmd.ExecuteReader();
             if (sdr.Read())
             {
                 Password = sdr.GetString(2);  //get the user password from db if the user name is exist in that.  
@@ -68,6 +64,7 @@ namespace LoginForm
                     string Password = Cryptography.Encrypt(txtRegPassword.Text.ToString());   // Passing the Password to Encrypt method and the method will return encrypted string and stored in Password variable.  
                     conn.Open();
                     SqlCommand insert = new SqlCommand("insert into tblUserRegistration(UserName,Password)values('" + UserName + "','" + Password + "')", conn);
+                    //OleDbCommand insert = new OleDbCommand("INSERT INTO tblUser(UserName,Password)values('" + UserName + "','" + Password + "')", conn);
                     insert.ExecuteNonQuery();
                     conn.Close();
                     MessageBox.Show("Record inserted successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -111,19 +108,5 @@ namespace LoginForm
             Application.Exit();
         }
 
-        private void txtRegPassword_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtRegCPassword_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtFirstname_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

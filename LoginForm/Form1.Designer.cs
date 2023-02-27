@@ -211,7 +211,6 @@
             this.txtRegPassword.PasswordChar = '*';
             this.txtRegPassword.Size = new System.Drawing.Size(218, 23);
             this.txtRegPassword.TabIndex = 18;
-            this.txtRegPassword.TextChanged += new System.EventHandler(this.txtRegPassword_TextChanged);
             // 
             // lblRegCPassword
             // 
@@ -229,7 +228,6 @@
             this.txtRegCPassword.PasswordChar = '*';
             this.txtRegCPassword.Size = new System.Drawing.Size(218, 23);
             this.txtRegCPassword.TabIndex = 20;
-            this.txtRegCPassword.TextChanged += new System.EventHandler(this.txtRegCPassword_TextChanged);
             // 
             // panel_Register
             // 
@@ -262,7 +260,6 @@
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LoginForm";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.panel_Login.ResumeLayout(false);
             this.panel_Login.PerformLayout();
             this.panel_Register.ResumeLayout(false);
