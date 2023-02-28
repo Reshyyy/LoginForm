@@ -148,5 +148,18 @@ namespace LoginForm
             con.Close();
             loadDatagrid();
         }
+
+        private void buttonClear_Click(object sender, EventArgs e)
+        {
+            txtno.Clear();
+            txttitle.Clear();
+            txtauthor.Clear();
+            txtSearch.Clear();
+        }
+
+        private void transactionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
