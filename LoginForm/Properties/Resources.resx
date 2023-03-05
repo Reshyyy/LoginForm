@@ -127,6 +127,9 @@
   <data name="borrowed" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\borrowed.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="student" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\student.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="winrar-archive" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\winrar-archive.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -139,7 +142,7 @@
   <data name="returned" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\returned.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="student" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\student.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="view_student" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\view_student.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

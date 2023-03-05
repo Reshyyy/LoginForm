@@ -133,6 +133,16 @@ namespace LoginForm.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap view_student {
+            get {
+                object obj = ResourceManager.GetObject("view_student", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap winrar_archive {
             get {
                 object obj = ResourceManager.GetObject("winrar-archive", resourceCulture);

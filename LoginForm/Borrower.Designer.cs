@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnBorrowBook = new System.Windows.Forms.Button();
             this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
@@ -45,18 +44,12 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnCreateBorrowerAccount = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnViewBorrowers = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(350, 23);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(117, 25);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "BORROWER";
             // 
             // groupBox1
             // 
@@ -75,20 +68,20 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(70, 68);
+            this.groupBox1.Location = new System.Drawing.Point(70, 146);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(634, 337);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Issue Book";
+            this.groupBox1.Text = "Borrow Book...";
             // 
             // btnBorrowBook
             // 
-            this.btnBorrowBook.Location = new System.Drawing.Point(415, 261);
+            this.btnBorrowBook.Location = new System.Drawing.Point(411, 255);
             this.btnBorrowBook.Name = "btnBorrowBook";
             this.btnBorrowBook.Size = new System.Drawing.Size(120, 44);
             this.btnBorrowBook.TabIndex = 14;
-            this.btnBorrowBook.Text = "Borrow Book";
+            this.btnBorrowBook.Text = "BORROW";
             this.btnBorrowBook.UseVisualStyleBackColor = true;
             this.btnBorrowBook.Click += new System.EventHandler(this.btnBorrowBook_Click);
             // 
@@ -213,13 +206,60 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Student Name";
             // 
+            // btnCreateBorrowerAccount
+            // 
+            this.btnCreateBorrowerAccount.BackgroundImage = global::LoginForm.Properties.Resources.student;
+            this.btnCreateBorrowerAccount.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCreateBorrowerAccount.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnCreateBorrowerAccount.Location = new System.Drawing.Point(86, 23);
+            this.btnCreateBorrowerAccount.Name = "btnCreateBorrowerAccount";
+            this.btnCreateBorrowerAccount.Size = new System.Drawing.Size(89, 58);
+            this.btnCreateBorrowerAccount.TabIndex = 3;
+            this.btnCreateBorrowerAccount.UseVisualStyleBackColor = true;
+            this.btnCreateBorrowerAccount.Click += new System.EventHandler(this.btnCreateBorrowerAccount_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label9.Location = new System.Drawing.Point(73, 86);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(121, 20);
+            this.label9.TabIndex = 4;
+            this.label9.Text = "Create Borrower ";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(211, 86);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(116, 20);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "View Borrowers ";
+            // 
+            // btnViewBorrowers
+            // 
+            this.btnViewBorrowers.BackgroundImage = global::LoginForm.Properties.Resources.view_student;
+            this.btnViewBorrowers.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnViewBorrowers.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnViewBorrowers.Location = new System.Drawing.Point(223, 23);
+            this.btnViewBorrowers.Name = "btnViewBorrowers";
+            this.btnViewBorrowers.Size = new System.Drawing.Size(89, 58);
+            this.btnViewBorrowers.TabIndex = 5;
+            this.btnViewBorrowers.UseVisualStyleBackColor = true;
+            this.btnViewBorrowers.Click += new System.EventHandler(this.btnViewBorrowers_Click);
+            // 
             // Borrower
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.groupBox1);
+            this.ClientSize = new System.Drawing.Size(769, 517);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnViewBorrowers);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.btnCreateBorrowerAccount);
+            this.Controls.Add(this.groupBox1);
             this.Name = "Borrower";
             this.Text = "Borrower";
             this.Load += new System.EventHandler(this.Borrower_Load);
@@ -231,8 +271,6 @@
         }
 
         #endregion
-
-        private Label label1;
         private GroupBox groupBox1;
         private TextBox txtEmail;
         private TextBox txtContactNumber;
@@ -249,5 +287,9 @@
         private ComboBox cmbBooks;
         private Button btnBorrowBook;
         private DateTimePicker dateTimePicker;
+        private Button btnCreateBorrowerAccount;
+        private Label label9;
+        private Label label1;
+        private Button btnViewBorrowers;
     }
 }

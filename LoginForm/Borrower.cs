@@ -41,7 +41,25 @@ namespace LoginForm
 
         private void btnBorrowBook_Click(object sender, EventArgs e)
         {
+            String st_name = txtStudentName.Text;
+            String st_id = txtIDNumber.Text;
+            String st_dep = txtDepartment.Text;
+            String st_contact = txtContactNumber.Text;
+            String st_email = txtEmail.Text;
 
+
+        }
+
+        private void btnCreateBorrowerAccount_Click(object sender, EventArgs e)
+        {
+            AddBorrower addBorrower = new AddBorrower();
+            addBorrower.ShowDialog();
+        }
+
+        private void btnViewBorrowers_Click(object sender, EventArgs e)
+        {
+            ViewBorrower viewBorrower = new ViewBorrower();
+            viewBorrower.ShowDialog();
         }
     }
 }

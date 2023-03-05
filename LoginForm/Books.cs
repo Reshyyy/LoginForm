@@ -115,5 +115,22 @@ namespace LoginForm
             txtauthor.Clear();
             txtSearch.Clear();
         }
+
+        private void Books_Load(object sender, EventArgs e)
+        {
+            con.Open();
+            SqlCommand com = new SqlCommand("select * from books order by accession_number asc", con);
+            com.ExecuteNonQuery();
+
+            SqlDataAdapter adap = new SqlDataAdapter(com);
+            DataTable tab = new DataTable();
+
+            adap.Fill(tab);
+            grid1.DataSource = tab;
+
+            con.Close();
+
+
+        }
     }
 }

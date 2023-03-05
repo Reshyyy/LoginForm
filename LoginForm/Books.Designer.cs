@@ -41,10 +41,10 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.grid1 = new System.Windows.Forms.DataGridView();
-            this.label6 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid1)).BeginInit();
@@ -180,6 +180,15 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Books";
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(23, 25);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(72, 15);
+            this.label6.TabIndex = 4;
+            this.label6.Text = "Book Name:";
+            // 
             // txtSearch
             // 
             this.txtSearch.Location = new System.Drawing.Point(102, 22);
@@ -208,15 +217,6 @@
             this.grid1.TabIndex = 0;
             this.grid1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid1_CellContentClick);
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(23, 25);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(72, 15);
-            this.label6.TabIndex = 4;
-            this.label6.Text = "Book Name:";
-            // 
             // Books
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -231,6 +231,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Books";
             this.Text = "Books";
+            this.Load += new System.EventHandler(this.Books_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
