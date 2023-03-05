@@ -100,5 +100,19 @@ namespace LoginForm
             txtcontact.Text = DS.Tables[0].Rows[0][4].ToString();
             txtemail.Text = DS.Tables[0].Rows[0][5].ToString();
         }
+
+        private void btnclearb_Click(object sender, EventArgs e)
+        {
+            txtname.Clear();
+            txtidnumber.Clear();
+            txtdepartment.Clear();
+            txtcontact.Clear();
+            txtemail.Clear();
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            txtsearchid.Clear();
+        }
     }
 }

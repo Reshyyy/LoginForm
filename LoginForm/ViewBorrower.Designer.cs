@@ -73,6 +73,7 @@
             this.btnClear.TabIndex = 3;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // label1
             // 
@@ -131,6 +132,7 @@
             this.btnclearb.TabIndex = 18;
             this.btnclearb.Text = "Clear";
             this.btnclearb.UseVisualStyleBackColor = true;
+            this.btnclearb.Click += new System.EventHandler(this.btnclearb_Click);
             // 
             // btnDelete
             // 
