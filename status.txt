@@ -1,0 +1,11 @@
+Transaction	
+	Conflict Avoidance
+	Borrow
+	     Decrease Inventory
+	Return
+	     Increase Inventory
+Reports	
+	Simple/Graphical
+	Date Filter
+	Labels/Headers
+	Print

@@ -142,6 +142,7 @@
             this.btnDelete.TabIndex = 18;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnUpdate
             // 
@@ -190,6 +191,7 @@
             // txtcontact
             // 
             this.txtcontact.Location = new System.Drawing.Point(508, 47);
+            this.txtcontact.MaxLength = 11;
             this.txtcontact.Name = "txtcontact";
             this.txtcontact.Size = new System.Drawing.Size(211, 23);
             this.txtcontact.TabIndex = 13;

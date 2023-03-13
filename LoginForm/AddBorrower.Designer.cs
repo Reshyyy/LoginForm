@@ -30,6 +30,7 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnClear = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.txtemail = new System.Windows.Forms.TextBox();
             this.txtcontact = new System.Windows.Forms.TextBox();
@@ -41,7 +42,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnClear = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -76,6 +76,16 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Fill here...";
             // 
+            // btnClear
+            // 
+            this.btnClear.Location = new System.Drawing.Point(401, 234);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(80, 42);
+            this.btnClear.TabIndex = 15;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
             // btnSave
             // 
             this.btnSave.Location = new System.Drawing.Point(315, 234);
@@ -96,6 +106,7 @@
             // txtcontact
             // 
             this.txtcontact.Location = new System.Drawing.Point(196, 159);
+            this.txtcontact.MaxLength = 11;
             this.txtcontact.Name = "txtcontact";
             this.txtcontact.Size = new System.Drawing.Size(299, 23);
             this.txtcontact.TabIndex = 10;
@@ -170,16 +181,6 @@
             this.label2.Size = new System.Drawing.Size(104, 20);
             this.label2.TabIndex = 0;
             this.label2.Text = "Student Name";
-            // 
-            // btnClear
-            // 
-            this.btnClear.Location = new System.Drawing.Point(401, 234);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(80, 42);
-            this.btnClear.TabIndex = 15;
-            this.btnClear.Text = "Clear";
-            this.btnClear.UseVisualStyleBackColor = true;
-            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // AddBorrower
             // 

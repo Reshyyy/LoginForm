@@ -37,31 +37,46 @@ namespace LoginForm
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            string an = txtno.Text;
-            string t = txttitle.Text;
-            string a = txtauthor.Text;
-            con.Open();
-            SqlCommand com = new SqlCommand("insert into books values ('" + an + "', '" + t + "', '" + a + "')", con);
-            com.ExecuteNonQuery();
+            if(txtno.Text != "" && txttitle.Text != "" && txtauthor.Text != "")
+            {
+                string an = txtno.Text;
+                string t = txttitle.Text;
+                string a = txtauthor.Text;
+                con.Open();
+                SqlCommand com = new SqlCommand("insert into books values ('" + an + "', '" + t + "', '" + a + "')", con);
+                com.ExecuteNonQuery();
 
-            MessageBox.Show("Successfully SAVED!", "info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Successfully SAVED!", "info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtno.Clear();
+                txttitle.Clear();
+                txtauthor.Clear();
 
-            con.Close();
-            loadDatagrid();
+                con.Close();
+                loadDatagrid();
+            }
+            else
+            {
+                MessageBox.Show("Empty field. Please fill the fields.", "Message", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            con.Open();
-            string no;
-            no = txtno.Text;
+            if(MessageBox.Show("Data will be Updated. Confirm?", "Success", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+            {
+                con.Open();
+                string no;
+                no = txtno.Text;
 
-            SqlCommand com = new SqlCommand("update books set title = '" + txttitle.Text + "', author='" + txtauthor.Text + "' where accession_number = '" + no + "'", con);
-            com.ExecuteNonQuery();
+                SqlCommand com = new SqlCommand("update books set title = '" + txttitle.Text + "', author='" + txtauthor.Text + "' where accession_number = '" + no + "'", con);
+                com.ExecuteNonQuery();
 
-            MessageBox.Show("Successfuly UPDATED!", "info", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            con.Close();
-            loadDatagrid();
+                MessageBox.Show("Successfuly UPDATED!", "info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                con.Close();
+                loadDatagrid();
+            }
+            
         }
 
         private void grid1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -89,23 +104,26 @@ namespace LoginForm
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            con.Open();
-            string num = txtno.Text;
-
-            DialogResult dr = MessageBox.Show("Are you sure you want to delete this?", "Confirm Deletion", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (dr == DialogResult.Yes)
+            if (MessageBox.Show("Data will be Deleted. Confirm?", "Confirm Delete", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
             {
-                SqlCommand com = new SqlCommand("delete from books where accession_number = '" + num + "'", con);
-                com.ExecuteNonQuery();
-                MessageBox.Show("Successfully DELETE!", "info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                con.Open();
+                string num = txtno.Text;
 
+                DialogResult dr = MessageBox.Show("Are you sure you want to delete this?", "Confirm Deletion", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dr == DialogResult.Yes)
+                {
+                    SqlCommand com = new SqlCommand("delete from books where accession_number = '" + num + "'", con);
+                    com.ExecuteNonQuery();
+                    MessageBox.Show("Successfully DELETE!", "info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                }
+                else
+                {
+                    MessageBox.Show("CANCELLED!", "info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                con.Close();
+                loadDatagrid();
             }
-            else
-            {
-                MessageBox.Show("CANCELLED!", "info", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            con.Close();
-            loadDatagrid();
         }
 
         private void btnClear_Click(object sender, EventArgs e)

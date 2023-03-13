@@ -112,7 +112,26 @@ namespace LoginForm
 
         private void btnClear_Click(object sender, EventArgs e)
         {
+            ViewBorrower_Load(this, null);
             txtsearchid.Clear();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Data will be Deleted. Confirm?", "Delete", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
+            {
+                SqlConnection con = new SqlConnection();
+                con.ConnectionString = "Data Source=DESKTOP-UOSHB5L;Initial Catalog=LoginFormTest;Integrated Security=True";
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = con;
+
+                cmd.CommandText = "delete from AddBorrower where stuid = " + rowid+"";
+                SqlDataAdapter DA = new SqlDataAdapter(cmd);
+                DataSet DS = new DataSet();
+                DA.Fill(DS);
+
+                ViewBorrower_Load(this, null);
+            }
         }
     }
 }
