@@ -42,8 +42,10 @@ namespace LoginForm
                 string an = txtno.Text;
                 string t = txttitle.Text;
                 string a = txtauthor.Text;
+                Int64 qty = Int64.Parse(txtqty.Text);
+                string p_date = datepurchased.Text;
                 con.Open();
-                SqlCommand com = new SqlCommand("insert into books values ('" + an + "', '" + t + "', '" + a + "')", con);
+                SqlCommand com = new SqlCommand("insert into books values ('" + an + "', '" + t + "', '" + a + "', '" + qty + "', '" + p_date + "')", con);
                 com.ExecuteNonQuery();
 
                 MessageBox.Show("Successfully SAVED!", "info", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -69,7 +71,7 @@ namespace LoginForm
                 string no;
                 no = txtno.Text;
 
-                SqlCommand com = new SqlCommand("update books set title = '" + txttitle.Text + "', author='" + txtauthor.Text + "' where accession_number = '" + no + "'", con);
+                SqlCommand com = new SqlCommand("update books set title = '" + txttitle.Text + "', author='" + txtauthor.Text + "', quantity = "+txtqty.Text+", purchase_date = '"+datepurchased.Text+"' where accession_number = '" + no + "'", con);
                 com.ExecuteNonQuery();
 
                 MessageBox.Show("Successfuly UPDATED!", "info", MessageBoxButtons.OK, MessageBoxIcon.Information);

@@ -45,6 +45,10 @@
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.grid1 = new System.Windows.Forms.DataGridView();
+            this.txtqty = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.datepurchased = new System.Windows.Forms.DateTimePicker();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid1)).BeginInit();
@@ -62,6 +66,10 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.datepurchased);
+            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.txtqty);
+            this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.txtauthor);
             this.groupBox1.Controls.Add(this.txttitle);
             this.groupBox1.Controls.Add(this.label4);
@@ -70,21 +78,21 @@
             this.groupBox1.Controls.Add(this.txtno);
             this.groupBox1.Location = new System.Drawing.Point(58, 380);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(413, 201);
+            this.groupBox1.Size = new System.Drawing.Size(413, 256);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Add Book";
             // 
             // txtauthor
             // 
-            this.txtauthor.Location = new System.Drawing.Point(155, 129);
+            this.txtauthor.Location = new System.Drawing.Point(155, 120);
             this.txtauthor.Name = "txtauthor";
             this.txtauthor.Size = new System.Drawing.Size(211, 23);
             this.txtauthor.TabIndex = 5;
             // 
             // txttitle
             // 
-            this.txttitle.Location = new System.Drawing.Point(155, 88);
+            this.txttitle.Location = new System.Drawing.Point(155, 79);
             this.txttitle.Name = "txttitle";
             this.txttitle.Size = new System.Drawing.Size(211, 23);
             this.txttitle.TabIndex = 4;
@@ -92,7 +100,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(42, 129);
+            this.label4.Location = new System.Drawing.Point(42, 120);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(44, 15);
             this.label4.TabIndex = 3;
@@ -101,7 +109,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(42, 91);
+            this.label3.Location = new System.Drawing.Point(42, 82);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(29, 15);
             this.label3.TabIndex = 2;
@@ -110,7 +118,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(42, 49);
+            this.label2.Location = new System.Drawing.Point(42, 40);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(107, 15);
             this.label2.TabIndex = 1;
@@ -118,7 +126,7 @@
             // 
             // txtno
             // 
-            this.txtno.Location = new System.Drawing.Point(155, 46);
+            this.txtno.Location = new System.Drawing.Point(155, 37);
             this.txtno.Name = "txtno";
             this.txtno.Size = new System.Drawing.Size(211, 23);
             this.txtno.TabIndex = 0;
@@ -178,7 +186,7 @@
             this.groupBox2.Size = new System.Drawing.Size(638, 289);
             this.groupBox2.TabIndex = 7;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Books";
+            this.groupBox2.Text = "View Books";
             // 
             // label6
             // 
@@ -217,11 +225,43 @@
             this.grid1.TabIndex = 0;
             this.grid1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid1_CellContentClick);
             // 
+            // txtqty
+            // 
+            this.txtqty.Location = new System.Drawing.Point(155, 161);
+            this.txtqty.Name = "txtqty";
+            this.txtqty.Size = new System.Drawing.Size(211, 23);
+            this.txtqty.TabIndex = 7;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(42, 164);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(53, 15);
+            this.label7.TabIndex = 6;
+            this.label7.Text = "Quantity";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(42, 206);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(89, 15);
+            this.label8.TabIndex = 8;
+            this.label8.Text = "Date Purchased";
+            // 
+            // datepurchased
+            // 
+            this.datepurchased.Location = new System.Drawing.Point(155, 203);
+            this.datepurchased.Name = "datepurchased";
+            this.datepurchased.Size = new System.Drawing.Size(211, 23);
+            this.datepurchased.TabIndex = 9;
+            // 
             // Books
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(706, 648);
+            this.ClientSize = new System.Drawing.Size(706, 668);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnDelete);
@@ -261,5 +301,9 @@
         private DataGridView grid1;
         private TextBox txtSearch;
         private Label label6;
+        private DateTimePicker datepurchased;
+        private Label label8;
+        private TextBox txtqty;
+        private Label label7;
     }
 }

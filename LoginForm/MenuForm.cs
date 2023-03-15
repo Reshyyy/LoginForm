@@ -32,17 +32,6 @@ namespace LoginForm
             borrower.ShowDialog();
         }
 
-        private void borrowedToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Borrowed borrowed = new Borrowed();
-            borrowed.ShowDialog();
-        }
-
-        private void returnedToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Returned returned = new Returned();
-            returned.ShowDialog();
-        }
 
         private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -81,14 +70,27 @@ namespace LoginForm
 
         private void btnBorrowed_Click(object sender, EventArgs e)
         {
-            Borrowed borrowed = new Borrowed();
-            borrowed.ShowDialog();
+            Borrow borrow = new Borrow();
+            borrow.ShowDialog();
         }
 
         private void btnReturned_Click(object sender, EventArgs e)
         {
-            Returned returned = new Returned();
-            returned.ShowDialog();
+            Return returnShow = new Return();
+            returnShow.ShowDialog();
         }
+
+        private void borrowToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Borrow borrow = new Borrow();
+            borrow.ShowDialog();
+        }
+
+        private void returnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Return returnShow = new Return();
+            returnShow.ShowDialog();
+        }
+
     }
 }

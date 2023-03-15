@@ -28,287 +28,269 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnBorrowBook = new System.Windows.Forms.Button();
-            this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.cmbBooks = new System.Windows.Forms.ComboBox();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.txtContactNumber = new System.Windows.Forms.TextBox();
-            this.txtDepartment = new System.Windows.Forms.TextBox();
-            this.txtStudentName = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btnclearb = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtdepartment = new System.Windows.Forms.TextBox();
+            this.txtemail = new System.Windows.Forms.TextBox();
+            this.txtcontact = new System.Windows.Forms.TextBox();
+            this.txtidnumber = new System.Windows.Forms.TextBox();
+            this.txtname = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnCreateBorrowerAccount = new System.Windows.Forms.Button();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnViewBorrowers = new System.Windows.Forms.Button();
-            this.txtenteridno = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.btnSearchStudent = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnClear = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtsearchid = new System.Windows.Forms.TextBox();
+            this.gridviewborrower = new System.Windows.Forms.DataGridView();
+            this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridviewborrower)).BeginInit();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // groupBox2
             // 
-            this.groupBox1.Controls.Add(this.btnBorrowBook);
-            this.groupBox1.Controls.Add(this.dateTimePicker);
-            this.groupBox1.Controls.Add(this.cmbBooks);
-            this.groupBox1.Controls.Add(this.txtEmail);
-            this.groupBox1.Controls.Add(this.txtContactNumber);
-            this.groupBox1.Controls.Add(this.txtDepartment);
-            this.groupBox1.Controls.Add(this.txtStudentName);
-            this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(73, 156);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(634, 363);
-            this.groupBox1.TabIndex = 2;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Borrow Book...";
+            this.groupBox2.Controls.Add(this.btnSave);
+            this.groupBox2.Controls.Add(this.btnclearb);
+            this.groupBox2.Controls.Add(this.btnDelete);
+            this.groupBox2.Controls.Add(this.btnUpdate);
+            this.groupBox2.Controls.Add(this.label6);
+            this.groupBox2.Controls.Add(this.label7);
+            this.groupBox2.Controls.Add(this.txtdepartment);
+            this.groupBox2.Controls.Add(this.txtemail);
+            this.groupBox2.Controls.Add(this.txtcontact);
+            this.groupBox2.Controls.Add(this.txtidnumber);
+            this.groupBox2.Controls.Add(this.txtname);
+            this.groupBox2.Controls.Add(this.label4);
+            this.groupBox2.Controls.Add(this.label3);
+            this.groupBox2.Controls.Add(this.label2);
+            this.groupBox2.Location = new System.Drawing.Point(47, 384);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(786, 213);
+            this.groupBox2.TabIndex = 7;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Borrower Details..";
             // 
-            // btnBorrowBook
+            // btnSave
             // 
-            this.btnBorrowBook.Location = new System.Drawing.Point(459, 252);
-            this.btnBorrowBook.Name = "btnBorrowBook";
-            this.btnBorrowBook.Size = new System.Drawing.Size(108, 44);
-            this.btnBorrowBook.TabIndex = 14;
-            this.btnBorrowBook.Text = "BORROW";
-            this.btnBorrowBook.UseVisualStyleBackColor = true;
-            this.btnBorrowBook.Click += new System.EventHandler(this.btnBorrowBook_Click);
+            this.btnSave.Location = new System.Drawing.Point(416, 132);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(80, 42);
+            this.btnSave.TabIndex = 19;
+            this.btnSave.Text = "Add";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // dateTimePicker
+            // btnclearb
             // 
-            this.dateTimePicker.Location = new System.Drawing.Point(189, 251);
-            this.dateTimePicker.Name = "dateTimePicker";
-            this.dateTimePicker.Size = new System.Drawing.Size(200, 23);
-            this.dateTimePicker.TabIndex = 13;
+            this.btnclearb.Location = new System.Drawing.Point(683, 132);
+            this.btnclearb.Name = "btnclearb";
+            this.btnclearb.Size = new System.Drawing.Size(76, 41);
+            this.btnclearb.TabIndex = 18;
+            this.btnclearb.Text = "Clear";
+            this.btnclearb.UseVisualStyleBackColor = true;
+            this.btnclearb.Click += new System.EventHandler(this.btnclearb_Click);
             // 
-            // cmbBooks
+            // btnDelete
             // 
-            this.cmbBooks.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbBooks.FormattingEnabled = true;
-            this.cmbBooks.Location = new System.Drawing.Point(189, 209);
-            this.cmbBooks.Name = "cmbBooks";
-            this.cmbBooks.Size = new System.Drawing.Size(378, 23);
-            this.cmbBooks.TabIndex = 12;
+            this.btnDelete.Location = new System.Drawing.Point(595, 132);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(76, 41);
+            this.btnDelete.TabIndex = 18;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
-            // txtEmail
+            // btnUpdate
             // 
-            this.txtEmail.Location = new System.Drawing.Point(189, 169);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.ReadOnly = true;
-            this.txtEmail.Size = new System.Drawing.Size(378, 23);
-            this.txtEmail.TabIndex = 11;
-            this.txtEmail.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
-            // 
-            // txtContactNumber
-            // 
-            this.txtContactNumber.Location = new System.Drawing.Point(189, 132);
-            this.txtContactNumber.MaxLength = 11;
-            this.txtContactNumber.Name = "txtContactNumber";
-            this.txtContactNumber.ReadOnly = true;
-            this.txtContactNumber.Size = new System.Drawing.Size(378, 23);
-            this.txtContactNumber.TabIndex = 10;
-            // 
-            // txtDepartment
-            // 
-            this.txtDepartment.Location = new System.Drawing.Point(189, 92);
-            this.txtDepartment.Name = "txtDepartment";
-            this.txtDepartment.ReadOnly = true;
-            this.txtDepartment.Size = new System.Drawing.Size(378, 23);
-            this.txtDepartment.TabIndex = 9;
-            // 
-            // txtStudentName
-            // 
-            this.txtStudentName.Location = new System.Drawing.Point(189, 54);
-            this.txtStudentName.Name = "txtStudentName";
-            this.txtStudentName.ReadOnly = true;
-            this.txtStudentName.Size = new System.Drawing.Size(378, 23);
-            this.txtStudentName.TabIndex = 7;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label8.Location = new System.Drawing.Point(67, 251);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(115, 20);
-            this.label8.TabIndex = 6;
-            this.label8.Text = "Book Issue Date";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(67, 210);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(87, 20);
-            this.label7.TabIndex = 5;
-            this.label7.Text = "Book Name";
+            this.btnUpdate.Location = new System.Drawing.Point(508, 132);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(76, 41);
+            this.btnUpdate.TabIndex = 18;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(66, 171);
+            this.label6.Location = new System.Drawing.Point(410, 82);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(46, 20);
-            this.label6.TabIndex = 4;
+            this.label6.TabIndex = 17;
             this.label6.Text = "Email";
             // 
-            // label5
+            // label7
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(65, 133);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(118, 20);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "Contact Number";
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label7.Location = new System.Drawing.Point(409, 47);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(87, 20);
+            this.label7.TabIndex = 16;
+            this.label7.Text = "Contact No.";
+            // 
+            // txtdepartment
+            // 
+            this.txtdepartment.Location = new System.Drawing.Point(150, 119);
+            this.txtdepartment.Name = "txtdepartment";
+            this.txtdepartment.Size = new System.Drawing.Size(211, 23);
+            this.txtdepartment.TabIndex = 15;
+            // 
+            // txtemail
+            // 
+            this.txtemail.Location = new System.Drawing.Point(508, 83);
+            this.txtemail.Name = "txtemail";
+            this.txtemail.Size = new System.Drawing.Size(211, 23);
+            this.txtemail.TabIndex = 14;
+            // 
+            // txtcontact
+            // 
+            this.txtcontact.Location = new System.Drawing.Point(508, 47);
+            this.txtcontact.MaxLength = 11;
+            this.txtcontact.Name = "txtcontact";
+            this.txtcontact.Size = new System.Drawing.Size(211, 23);
+            this.txtcontact.TabIndex = 13;
+            // 
+            // txtidnumber
+            // 
+            this.txtidnumber.Location = new System.Drawing.Point(150, 83);
+            this.txtidnumber.Name = "txtidnumber";
+            this.txtidnumber.Size = new System.Drawing.Size(211, 23);
+            this.txtidnumber.TabIndex = 14;
+            // 
+            // txtname
+            // 
+            this.txtname.Location = new System.Drawing.Point(150, 46);
+            this.txtname.Name = "txtname";
+            this.txtname.Size = new System.Drawing.Size(211, 23);
+            this.txtname.TabIndex = 13;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(66, 94);
+            this.label4.Location = new System.Drawing.Point(28, 119);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(89, 20);
-            this.label4.TabIndex = 2;
+            this.label4.TabIndex = 12;
             this.label4.Text = "Department";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.Location = new System.Drawing.Point(28, 84);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(88, 20);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "ID NUMBER";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(65, 55);
+            this.label2.Location = new System.Drawing.Point(27, 46);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(104, 20);
-            this.label2.TabIndex = 0;
+            this.label2.TabIndex = 10;
             this.label2.Text = "Student Name";
             // 
-            // btnCreateBorrowerAccount
+            // groupBox1
             // 
-            this.btnCreateBorrowerAccount.BackgroundImage = global::LoginForm.Properties.Resources.student;
-            this.btnCreateBorrowerAccount.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnCreateBorrowerAccount.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnCreateBorrowerAccount.Location = new System.Drawing.Point(86, 23);
-            this.btnCreateBorrowerAccount.Name = "btnCreateBorrowerAccount";
-            this.btnCreateBorrowerAccount.Size = new System.Drawing.Size(89, 58);
-            this.btnCreateBorrowerAccount.TabIndex = 3;
-            this.btnCreateBorrowerAccount.UseVisualStyleBackColor = true;
-            this.btnCreateBorrowerAccount.Click += new System.EventHandler(this.btnCreateBorrowerAccount_Click);
+            this.groupBox1.Controls.Add(this.btnClear);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.txtsearchid);
+            this.groupBox1.Controls.Add(this.gridviewborrower);
+            this.groupBox1.Location = new System.Drawing.Point(47, 44);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(786, 302);
+            this.groupBox1.TabIndex = 8;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "View";
             // 
-            // label9
+            // btnClear
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label9.Location = new System.Drawing.Point(73, 86);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(121, 20);
-            this.label9.TabIndex = 4;
-            this.label9.Text = "Create Borrower ";
+            this.btnClear.Location = new System.Drawing.Point(484, 22);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(75, 23);
+            this.btnClear.TabIndex = 3;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
-            // label1
+            // label5
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(211, 86);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(116, 20);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "View Borrowers ";
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(183, 25);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(69, 15);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "ID NUMBER";
             // 
-            // btnViewBorrowers
+            // txtsearchid
             // 
-            this.btnViewBorrowers.BackgroundImage = global::LoginForm.Properties.Resources.view_student;
-            this.btnViewBorrowers.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnViewBorrowers.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnViewBorrowers.Location = new System.Drawing.Point(223, 23);
-            this.btnViewBorrowers.Name = "btnViewBorrowers";
-            this.btnViewBorrowers.Size = new System.Drawing.Size(89, 58);
-            this.btnViewBorrowers.TabIndex = 5;
-            this.btnViewBorrowers.UseVisualStyleBackColor = true;
-            this.btnViewBorrowers.Click += new System.EventHandler(this.btnViewBorrowers_Click);
+            this.txtsearchid.Location = new System.Drawing.Point(268, 22);
+            this.txtsearchid.Name = "txtsearchid";
+            this.txtsearchid.Size = new System.Drawing.Size(199, 23);
+            this.txtsearchid.TabIndex = 1;
+            this.txtsearchid.TextChanged += new System.EventHandler(this.txtsearchid_TextChanged);
             // 
-            // txtenteridno
+            // gridviewborrower
             // 
-            this.txtenteridno.Location = new System.Drawing.Point(546, 42);
-            this.txtenteridno.Name = "txtenteridno";
-            this.txtenteridno.Size = new System.Drawing.Size(161, 23);
-            this.txtenteridno.TabIndex = 7;
-            this.txtenteridno.TextChanged += new System.EventHandler(this.txtenteridno_TextChanged);
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(458, 45);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(82, 15);
-            this.label10.TabIndex = 8;
-            this.label10.Text = "ENTER ID NO.:";
-            // 
-            // btnSearchStudent
-            // 
-            this.btnSearchStudent.Location = new System.Drawing.Point(577, 77);
-            this.btnSearchStudent.Name = "btnSearchStudent";
-            this.btnSearchStudent.Size = new System.Drawing.Size(102, 40);
-            this.btnSearchStudent.TabIndex = 9;
-            this.btnSearchStudent.Text = "Search Student";
-            this.btnSearchStudent.UseVisualStyleBackColor = true;
-            this.btnSearchStudent.Click += new System.EventHandler(this.btnSearchStudent_Click);
+            this.gridviewborrower.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridviewborrower.Location = new System.Drawing.Point(18, 55);
+            this.gridviewborrower.Name = "gridviewborrower";
+            this.gridviewborrower.RowTemplate.Height = 25;
+            this.gridviewborrower.Size = new System.Drawing.Size(745, 219);
+            this.gridviewborrower.TabIndex = 0;
+            this.gridviewborrower.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridviewborrower_CellClick);
             // 
             // Borrower
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(774, 568);
-            this.Controls.Add(this.btnSearchStudent);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.txtenteridno);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnViewBorrowers);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.btnCreateBorrowerAccount);
+            this.ClientSize = new System.Drawing.Size(879, 655);
             this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.groupBox2);
             this.Name = "Borrower";
             this.Text = "Borrower";
             this.Load += new System.EventHandler(this.Borrower_Load);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridviewborrower)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-        private GroupBox groupBox1;
-        private TextBox txtEmail;
-        private TextBox txtContactNumber;
-        private TextBox txtDepartment;
-        private TextBox txtStudentName;
-        private Label label8;
-        private Label label7;
+        private GroupBox groupBox2;
+        private Button btnclearb;
+        private Button btnDelete;
+        private Button btnUpdate;
         private Label label6;
-        private Label label5;
+        private Label label7;
+        private TextBox txtdepartment;
+        private TextBox txtemail;
+        private TextBox txtcontact;
+        private TextBox txtidnumber;
+        private TextBox txtname;
         private Label label4;
+        private Label label3;
         private Label label2;
-        private ComboBox cmbBooks;
-        private Button btnBorrowBook;
-        private DateTimePicker dateTimePicker;
-        private Button btnCreateBorrowerAccount;
-        private Label label9;
-        private Label label1;
-        private Button btnViewBorrowers;
-        private TextBox txtenteridno;
-        private Label label10;
-        private Button btnSearchStudent;
+        private Button btnSave;
+        private GroupBox groupBox1;
+        private Button btnClear;
+        private Label label5;
+        private TextBox txtsearchid;
+        private DataGridView gridviewborrower;
     }
 }

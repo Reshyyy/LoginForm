@@ -20,136 +20,155 @@ namespace LoginForm
 
         private void Borrower_Load(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-UOSHB5L;Initial Catalog=LoginFormTest;Integrated Security=True");
+            SqlConnection con = new SqlConnection();
+            con.ConnectionString = "Data Source=DESKTOP-UOSHB5L;Initial Catalog=LoginFormTest;Integrated Security=True";
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;
-            con.Open();
 
-            cmd = new SqlCommand("select title from books", con);
-            SqlDataReader sdr = cmd.ExecuteReader();
+            cmd.CommandText = "select * from AddBorrower";
+            SqlDataAdapter DA = new SqlDataAdapter(cmd);
+            DataSet DS = new DataSet();
+            DA.Fill(DS);
 
-            while (sdr.Read())
-            {
-                for(int i = 0; i < sdr.FieldCount; i++)
-                {
-                    cmbBooks.Items.Add(sdr.GetString(i));
-                }
-            }
-            sdr.Close();
-            con.Close();
+            gridviewborrower.DataSource = DS.Tables[0];
         }
 
-        private void btnBorrowBook_Click(object sender, EventArgs e)
+ 
+
+
+
+        private void txtsearchid_TextChanged(object sender, EventArgs e)
         {
-            
+            SqlConnection con = new SqlConnection();
+            con.ConnectionString = "Data Source=DESKTOP-UOSHB5L;Initial Catalog=LoginFormTest;Integrated Security=True";
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = con;
 
-            if(txtStudentName.Text != "")
-            {
-                if(cmbBooks.SelectedIndex != -1 && count <= 2)
-                {
-                    String std_name = txtStudentName.Text;
-                    String std_number = txtenteridno.Text;
-                    String std_dept = txtDepartment.Text;
-                    Int64 std_contact = Int64.Parse(txtContactNumber.Text);
-                    String std_email = txtEmail.Text;
-                    String book_name = cmbBooks.Text;
-                    String borrow_date = dateTimePicker.Text;
+            cmd.CommandText = "select * from AddBorrower where idnum LIKE '" + txtsearchid.Text + "%' ";
+            SqlDataAdapter DA = new SqlDataAdapter(cmd);
+            DataSet DS = new DataSet();
+            DA.Fill(DS);
 
-                    String eidno = txtenteridno.Text;
-                    SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-UOSHB5L;Initial Catalog=LoginFormTest;Integrated Security=True");
-                    SqlCommand cmd = new SqlCommand();
-                    cmd.Connection = con;
-                    con.Open();
-                    cmd.CommandText = "insert into BorrowBook (std_name,std_number,std_dept,std_contact,std_email,book_name,borrow_date) values ('" + std_name + "', '" + std_number + "',  '"+ std_dept + "', " + std_contact +", '" + std_email + "', '"+book_name+"', '"+borrow_date+"')";
-                    cmd.ExecuteNonQuery();
-                    con.Close();
-
-                    MessageBox.Show("Book Borrowed.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                }
-                else
-                {
-                    MessageBox.Show("Select Book. OR Maximum number of Book has been borrowed.", "No Book selected", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-            else
-            {
-                MessageBox.Show("Enter valid ID Number.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
-
+            gridviewborrower.DataSource = DS.Tables[0];
         }
 
-        private void btnCreateBorrowerAccount_Click(object sender, EventArgs e)
+        private void btnClear_Click(object sender, EventArgs e)
         {
-            AddBorrower addBorrower = new AddBorrower();
-            addBorrower.ShowDialog();
+            Borrower_Load(this, null);
+            txtsearchid.Clear();
         }
 
-        private void btnViewBorrowers_Click(object sender, EventArgs e)
+        private void btnSave_Click(object sender, EventArgs e)
         {
-            ViewBorrower viewBorrower = new ViewBorrower();
-            viewBorrower.ShowDialog();
-        }
-
-        int count;
-        private void btnSearchStudent_Click(object sender, EventArgs e)
-        {
-            if(txtenteridno.Text != "")
+            if (txtname.Text != "" && txtidnumber.Text != "" && txtdepartment.Text != "" && txtcontact.Text != "" && txtemail.Text != "")
             {
-                String eidno = txtenteridno.Text;
-                SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-UOSHB5L;Initial Catalog=LoginFormTest;Integrated Security=True");
+                String name = txtname.Text;
+                String idnum = txtidnumber.Text;
+                String dep = txtdepartment.Text;
+                Int64 contact = Int64.Parse(txtcontact.Text);
+                String email = txtemail.Text;
+
+                SqlConnection con = new SqlConnection();
+                con.ConnectionString = "Data Source=DESKTOP-UOSHB5L;Initial Catalog=LoginFormTest;Integrated Security=True";
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = con;
 
-                cmd.CommandText = "select * from AddBorrower where idnum = '" + eidno + "'";
+                con.Open();
+                cmd.CommandText = "insert into AddBorrower (sname,idnum,dep,contact,email) values('" + name + "', '" + idnum + "', '" + dep + "', '" + contact + "', '" + email + "')";
+                cmd.ExecuteNonQuery();
+                con.Close();
+                MessageBox.Show("Data Saved!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                txtname.Clear();
+                txtidnumber.Clear();
+                txtdepartment.Clear();
+                txtcontact.Clear();
+                txtemail.Clear();
+            }
+            else
+            {
+                MessageBox.Show("Empty field. Please fill the fields.", "Message", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            String sname = txtname.Text;
+            String idnum = txtidnumber.Text;
+            String dep = txtdepartment.Text;
+            Int64 contact = Int64.Parse(txtcontact.Text);
+            String email = txtemail.Text;
+
+            if (MessageBox.Show("Data will be Updated. Confirm?", "Success", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+            {
+                SqlConnection con = new SqlConnection();
+                con.ConnectionString = "Data Source=DESKTOP-UOSHB5L;Initial Catalog=LoginFormTest;Integrated Security=True";
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = con;
+
+                cmd.CommandText = "update AddBorrower set sname = '" + sname + "', idnum = '" + idnum + "', dep = '" + dep + "', contact = '" + contact + "', email = '" + email + "' where stuid = " + rowid + "";
                 SqlDataAdapter DA = new SqlDataAdapter(cmd);
                 DataSet DS = new DataSet();
                 DA.Fill(DS);
 
-                //----------------------
-                //Code to Count how many book has been issued on this ID Number
-
-                cmd.CommandText = "select count(std_number) from BorrowBook where std_number = '" + eidno + "' and return_date is null";
-                SqlDataAdapter DA1 = new SqlDataAdapter(cmd);
-                DataSet DS1 = new DataSet();
-                DA1.Fill(DS1);
-
-                count = int.Parse(DS1.Tables[0].Rows[0][0].ToString());
-                //----------------------
-
-                if (DS.Tables[0].Rows.Count != 0)
-                {
-                    txtStudentName.Text = DS.Tables[0].Rows[0][1].ToString();
-                    txtDepartment.Text = DS.Tables[0].Rows[0][3].ToString();
-                    txtContactNumber.Text = DS.Tables[0].Rows[0][4].ToString();
-                    txtEmail.Text = DS.Tables[0].Rows[0][5].ToString();
-                }
-                else
-                {
-                    txtStudentName.Clear();
-                    txtDepartment.Clear();
-                    txtContactNumber.Clear();
-                    txtEmail.Clear();
-                    MessageBox.Show("Invalid ID Number.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                Borrower_Load(this, null);
             }
         }
 
-        private void txtenteridno_TextChanged(object sender, EventArgs e)
+        private void btnDelete_Click(object sender, EventArgs e)
         {
-            if(txtenteridno.Text == "")
+            if (MessageBox.Show("Data will be Deleted. Confirm?", "Delete", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
             {
-                txtStudentName.Clear();
-                txtDepartment.Clear();
-                txtContactNumber.Clear();
-                txtEmail.Clear();
+                SqlConnection con = new SqlConnection();
+                con.ConnectionString = "Data Source=DESKTOP-UOSHB5L;Initial Catalog=LoginFormTest;Integrated Security=True";
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = con;
+
+                cmd.CommandText = "delete from AddBorrower where stuid = " + rowid + "";
+                SqlDataAdapter DA = new SqlDataAdapter(cmd);
+                DataSet DS = new DataSet();
+                DA.Fill(DS);
+
+                Borrower_Load(this, null);
             }
         }
 
-        private void txtEmail_TextChanged(object sender, EventArgs e)
+        int bid;
+        Int64 rowid;
+        private void gridviewborrower_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (gridviewborrower.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+            {
+                bid = int.Parse(gridviewborrower.Rows[e.RowIndex].Cells[0].Value.ToString());
+            }
 
+            SqlConnection con = new SqlConnection();
+            con.ConnectionString = "Data Source=DESKTOP-UOSHB5L;Initial Catalog=LoginFormTest;Integrated Security=True";
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = con;
+
+            cmd.CommandText = "select * from AddBorrower where stuid = " + bid + "";
+            SqlDataAdapter DA = new SqlDataAdapter(cmd);
+            DataSet DS = new DataSet();
+            DA.Fill(DS);
+
+            rowid = Int64.Parse(DS.Tables[0].Rows[0][0].ToString());
+
+            txtname.Text = DS.Tables[0].Rows[0][1].ToString();
+            txtidnumber.Text = DS.Tables[0].Rows[0][2].ToString();
+            txtdepartment.Text = DS.Tables[0].Rows[0][3].ToString();
+            txtcontact.Text = DS.Tables[0].Rows[0][4].ToString();
+            txtemail.Text = DS.Tables[0].Rows[0][5].ToString();
         }
+
+        private void btnclearb_Click(object sender, EventArgs e)
+        {
+            txtname.Clear();
+            txtidnumber.Clear();
+            txtdepartment.Clear();
+            txtcontact.Clear();
+            txtemail.Clear();
+        }
+
     }
 }

@@ -33,8 +33,8 @@
             this.booksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.borrowerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.transactionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.borrowedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.returnedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.borrowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.returnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
@@ -74,46 +74,46 @@
             // booksToolStripMenuItem
             // 
             this.booksToolStripMenuItem.Name = "booksToolStripMenuItem";
-            this.booksToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
+            this.booksToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.booksToolStripMenuItem.Text = "Books";
             this.booksToolStripMenuItem.Click += new System.EventHandler(this.booksToolStripMenuItem_Click);
             // 
             // borrowerToolStripMenuItem
             // 
             this.borrowerToolStripMenuItem.Name = "borrowerToolStripMenuItem";
-            this.borrowerToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
+            this.borrowerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.borrowerToolStripMenuItem.Text = "Borrower";
             this.borrowerToolStripMenuItem.Click += new System.EventHandler(this.borrowerToolStripMenuItem_Click);
             // 
             // transactionToolStripMenuItem
             // 
             this.transactionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.borrowedToolStripMenuItem,
-            this.returnedToolStripMenuItem});
+            this.borrowToolStripMenuItem,
+            this.returnToolStripMenuItem});
             this.transactionToolStripMenuItem.Name = "transactionToolStripMenuItem";
             this.transactionToolStripMenuItem.Size = new System.Drawing.Size(79, 20);
             this.transactionToolStripMenuItem.Text = "Transaction";
             this.transactionToolStripMenuItem.Click += new System.EventHandler(this.transactionToolStripMenuItem_Click);
             // 
-            // borrowedToolStripMenuItem
+            // borrowToolStripMenuItem
             // 
-            this.borrowedToolStripMenuItem.Name = "borrowedToolStripMenuItem";
-            this.borrowedToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
-            this.borrowedToolStripMenuItem.Text = "Borrowed";
-            this.borrowedToolStripMenuItem.Click += new System.EventHandler(this.borrowedToolStripMenuItem_Click);
+            this.borrowToolStripMenuItem.Name = "borrowToolStripMenuItem";
+            this.borrowToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.borrowToolStripMenuItem.Text = "Borrow";
+            this.borrowToolStripMenuItem.Click += new System.EventHandler(this.borrowToolStripMenuItem_Click);
             // 
-            // returnedToolStripMenuItem
+            // returnToolStripMenuItem
             // 
-            this.returnedToolStripMenuItem.Name = "returnedToolStripMenuItem";
-            this.returnedToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
-            this.returnedToolStripMenuItem.Text = "Returned";
-            this.returnedToolStripMenuItem.Click += new System.EventHandler(this.returnedToolStripMenuItem_Click);
+            this.returnToolStripMenuItem.Name = "returnToolStripMenuItem";
+            this.returnToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.returnToolStripMenuItem.Text = "Return";
+            this.returnToolStripMenuItem.Click += new System.EventHandler(this.returnToolStripMenuItem_Click);
             // 
             // reportToolStripMenuItem
             // 
             this.reportToolStripMenuItem.Name = "reportToolStripMenuItem";
-            this.reportToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
-            this.reportToolStripMenuItem.Text = "Report";
+            this.reportToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
+            this.reportToolStripMenuItem.Text = "Reports";
             // 
             // logoutToolStripMenuItem
             // 
@@ -166,7 +166,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(317, 181);
+            this.label3.Location = new System.Drawing.Point(323, 181);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(55, 15);
             this.label3.TabIndex = 17;
@@ -197,20 +197,20 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(175, 305);
+            this.label4.Location = new System.Drawing.Point(176, 305);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(58, 15);
+            this.label4.Size = new System.Drawing.Size(45, 15);
             this.label4.TabIndex = 20;
-            this.label4.Text = "Borrowed";
+            this.label4.Text = "Borrow";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(317, 305);
+            this.label5.Location = new System.Drawing.Point(330, 305);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(55, 15);
+            this.label5.Size = new System.Drawing.Size(42, 15);
             this.label5.TabIndex = 21;
-            this.label5.Text = "Returned";
+            this.label5.Text = "Return";
             // 
             // MenuForm
             // 
@@ -246,8 +246,6 @@
         private ToolStripMenuItem borrowerToolStripMenuItem;
         private ToolStripMenuItem transactionToolStripMenuItem;
         private ToolStripMenuItem reportToolStripMenuItem;
-        private ToolStripMenuItem borrowedToolStripMenuItem;
-        private ToolStripMenuItem returnedToolStripMenuItem;
         private ToolStripMenuItem logoutToolStripMenuItem;
         private Label label1;
         private Button btnBooks;
@@ -258,5 +256,7 @@
         private Button btnReturned;
         private Label label4;
         private Label label5;
+        private ToolStripMenuItem borrowToolStripMenuItem;
+        private ToolStripMenuItem returnToolStripMenuItem;
     }
 }
