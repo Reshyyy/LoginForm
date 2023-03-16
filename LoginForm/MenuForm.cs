@@ -92,5 +92,10 @@ namespace LoginForm
             returnShow.ShowDialog();
         }
 
+        private void reportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Reports rpt = new Reports();
+            rpt.ShowDialog();
+        }
     }
 }

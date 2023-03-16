@@ -74,14 +74,14 @@
             // booksToolStripMenuItem
             // 
             this.booksToolStripMenuItem.Name = "booksToolStripMenuItem";
-            this.booksToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.booksToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.booksToolStripMenuItem.Text = "Books";
             this.booksToolStripMenuItem.Click += new System.EventHandler(this.booksToolStripMenuItem_Click);
             // 
             // borrowerToolStripMenuItem
             // 
             this.borrowerToolStripMenuItem.Name = "borrowerToolStripMenuItem";
-            this.borrowerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.borrowerToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.borrowerToolStripMenuItem.Text = "Borrower";
             this.borrowerToolStripMenuItem.Click += new System.EventHandler(this.borrowerToolStripMenuItem_Click);
             // 
@@ -98,14 +98,14 @@
             // borrowToolStripMenuItem
             // 
             this.borrowToolStripMenuItem.Name = "borrowToolStripMenuItem";
-            this.borrowToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.borrowToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
             this.borrowToolStripMenuItem.Text = "Borrow";
             this.borrowToolStripMenuItem.Click += new System.EventHandler(this.borrowToolStripMenuItem_Click);
             // 
             // returnToolStripMenuItem
             // 
             this.returnToolStripMenuItem.Name = "returnToolStripMenuItem";
-            this.returnToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.returnToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
             this.returnToolStripMenuItem.Text = "Return";
             this.returnToolStripMenuItem.Click += new System.EventHandler(this.returnToolStripMenuItem_Click);
             // 
@@ -114,6 +114,7 @@
             this.reportToolStripMenuItem.Name = "reportToolStripMenuItem";
             this.reportToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
             this.reportToolStripMenuItem.Text = "Reports";
+            this.reportToolStripMenuItem.Click += new System.EventHandler(this.reportToolStripMenuItem_Click);
             // 
             // logoutToolStripMenuItem
             // 
