@@ -55,6 +55,11 @@ namespace LoginForm
 
             MessageBox.Show("Returned Successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             Return_Load(this, null);
+
+            txtenteridno.Clear();
+            txtBookName.Clear();
+            txtBorrowedDate.Clear();
+
         }
 
         String bname;

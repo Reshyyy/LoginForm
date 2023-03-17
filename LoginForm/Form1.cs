@@ -56,29 +56,46 @@ namespace LoginForm
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            if (txtRegUsername.Text != "" && txtRegPassword.Text != "" && txtRegCPassword.Text != "")  //validating the fields whether the fields or empty or not  
+            //check if username already exists
+            SqlCommand cmd = new SqlCommand("select * from tblUserRegistration where username = '" + txtRegUsername.Text + "' ", conn);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            int i = ds.Tables[0].Rows.Count;
+            if (i > 0)
             {
-                if (txtRegPassword.Text.ToString().Trim().ToLower() == txtRegCPassword.Text.ToString().Trim().ToLower()) //validating Password textbox and confirm password textbox is match or unmatch    
-                {
-                    string UserName = txtRegUsername.Text;
-                    string Password = Cryptography.Encrypt(txtRegPassword.Text.ToString());   // Passing the Password to Encrypt method and the method will return encrypted string and stored in Password variable.  
-                    conn.Open();
-                    SqlCommand insert = new SqlCommand("insert into tblUserRegistration(UserName,Password)values('" + UserName + "','" + Password + "')", conn);
-                    //OleDbCommand insert = new OleDbCommand("INSERT INTO tblUser(UserName,Password)values('" + UserName + "','" + Password + "')", conn);
-                    insert.ExecuteNonQuery();
-                    conn.Close();
-                    MessageBox.Show("Record inserted successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else
-                {
-                    MessageBox.Show("Password and Confirm Password doesn't match!.. Please Check..", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);  //showing the error message if password and confirm password doesn't match  
-                }
+                MessageBox.Show("Username Already Exists.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
-                MessageBox.Show("Please fill all the fields!..", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);  //showing the error message if any fields is empty  
-            }
+                if (txtRegUsername.Text != "" && txtRegPassword.Text != "" && txtRegCPassword.Text != "")  //validating the fields whether the fields or empty or not  
+                {
 
+                    if (txtRegPassword.Text.ToString().Trim().ToLower() == txtRegCPassword.Text.ToString().Trim().ToLower()) //validating Password textbox and confirm password textbox is match or unmatch    
+                    {
+                        string UserName = txtRegUsername.Text;
+                        string Password = Cryptography.Encrypt(txtRegPassword.Text.ToString());   // Passing the Password to Encrypt method and the method will return encrypted string and stored in Password variable.  
+                        conn.Open();
+                        SqlCommand insert = new SqlCommand("insert into tblUserRegistration(UserName,Password)values('" + UserName + "','" + Password + "')", conn);
+                        //OleDbCommand insert = new OleDbCommand("INSERT INTO tblUser(UserName,Password)values('" + UserName + "','" + Password + "')", conn);
+                        insert.ExecuteNonQuery();
+                        conn.Close();
+                        MessageBox.Show("Record inserted successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        txtRegUsername.Clear();
+                        txtRegPassword.Clear();
+                        txtRegCPassword.Clear();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Password and Confirm Password doesn't match!.. Please Check..", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);  //showing the error message if password and confirm password doesn't match  
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Please fill all the fields!..", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);  //showing the error message if any fields is empty  
+                }
+            }
         }
 
         private void btnLoginForm_Click(object sender, EventArgs e)

@@ -86,6 +86,7 @@ namespace LoginForm
             txtno.Text = grid1.Rows[e.RowIndex].Cells["accession_number"].Value.ToString();
             txttitle.Text = grid1.Rows[e.RowIndex].Cells["title"].Value.ToString();
             txtauthor.Text = grid1.Rows[e.RowIndex].Cells["author"].Value.ToString();
+            txtqty.Text = grid1.Rows[e.RowIndex].Cells["quantity"].Value.ToString();
         }
 
 
@@ -134,6 +135,7 @@ namespace LoginForm
             txttitle.Clear();
             txtauthor.Clear();
             txtSearch.Clear();
+            txtqty.Clear();
         }
 
         private void Books_Load(object sender, EventArgs e)
