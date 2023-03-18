@@ -29,7 +29,7 @@ namespace LoginForm
             }
         }
 
-        int count;
+        
         private void btnSearchStudent_Click(object sender, EventArgs e)
         {
             if (txtenteridno.Text != "")
@@ -73,6 +73,7 @@ namespace LoginForm
             }
         }
 
+        
         private void Borrow_Load(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-UOSHB5L;Initial Catalog=LoginFormTest;Integrated Security=True");
@@ -80,7 +81,7 @@ namespace LoginForm
             cmd.Connection = con;
             con.Open();
 
-            cmd = new SqlCommand("select title from books", con);
+            cmd = new SqlCommand("select book_title from tbl_books1", con);
             SqlDataReader sdr = cmd.ExecuteReader();
 
             while (sdr.Read())
@@ -94,11 +95,12 @@ namespace LoginForm
             con.Close();
         }
 
+        int count;
         private void btnBorrowBook_Click(object sender, EventArgs e)
         {
             if (txtStudentName.Text != "")
             {
-                if (cmbBooks.SelectedIndex != -1 && count <= 2)
+                if (cmbBooks.SelectedIndex != -1 && count<=1000)
                 {
                     String std_name = txtStudentName.Text;
                     String std_number = txtenteridno.Text;
@@ -110,14 +112,47 @@ namespace LoginForm
 
                     String eidno = txtenteridno.Text;
                     SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-UOSHB5L;Initial Catalog=LoginFormTest;Integrated Security=True");
-                    SqlCommand cmd = new SqlCommand();
-                    cmd.Connection = con;
-                    con.Open();
-                    cmd.CommandText = "insert into BorrowBook (std_name,std_number,std_dept,std_contact,std_email,book_name,borrow_date) values ('" + std_name + "', '" + std_number + "',  '" + std_dept + "', " + std_contact + ", '" + std_email + "', '" + book_name + "', '" + borrow_date + "')";
-                    cmd.ExecuteNonQuery();
-                    con.Close();
+                    
 
-                    MessageBox.Show("Book Borrowed.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //check
+                    int quantity=0;
+                    SqlCommand cmd2 = new SqlCommand();
+                    cmd2.Connection = con;
+                    con.Open();
+                    cmd2.CommandText = "select * from tbl_books1 where book_title='"+cmbBooks.Text+"'";
+                    cmd2.ExecuteNonQuery();
+                    DataTable dt = new DataTable();
+                    SqlDataAdapter da = new SqlDataAdapter(cmd2);
+                    da.Fill(dt);
+
+                    foreach(DataRow dr2 in dt.Rows)
+                    {
+                        quantity = Convert.ToInt32(dr2["book_quantity"].ToString());
+                    }
+
+                    if (quantity > 0)
+                    {
+                        SqlCommand cmd = new SqlCommand();
+                        cmd.Connection = con;
+                        cmd.CommandText = "insert into BorrowBook (std_name,std_number,std_dept,std_contact,std_email,book_name,borrow_date) values ('" + std_name + "', '" + std_number + "',  '" + std_dept + "', " + std_contact + ", '" + std_email + "', '" + book_name + "', '" + borrow_date + "')";
+                        cmd.ExecuteNonQuery();
+
+                        //decrease quantity
+                        SqlCommand cmd1 = new SqlCommand();
+                        cmd.Connection = con;
+                        //con.Open();
+                        cmd.CommandText = "update tbl_books1 set book_quantity = book_quantity - 1 where book_title = '" + cmbBooks.SelectedItem + "'";
+                        cmd.ExecuteNonQuery();
+                        con.Close();
+
+                        MessageBox.Show("Book Borrowed.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Books not available.", "Not Available", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+                    con.Close();
 
                 }
                 else
@@ -129,6 +164,11 @@ namespace LoginForm
             {
                 MessageBox.Show("Enter valid ID Number.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void cmbBooks_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -22,7 +22,7 @@ namespace LoginForm
         public void loadDatagrid()
         {
             con.Open();
-            SqlCommand com = new SqlCommand("select * from books order by accession_number asc", con);
+            SqlCommand com = new SqlCommand("select * from tbl_books1 order by accession_number asc", con);
             com.ExecuteNonQuery();
 
             SqlDataAdapter adap = new SqlDataAdapter(com);
@@ -42,16 +42,20 @@ namespace LoginForm
                 string an = txtno.Text;
                 string t = txttitle.Text;
                 string a = txtauthor.Text;
+                Int64 price = Int64.Parse(txtprice.Text);
                 Int64 qty = Int64.Parse(txtqty.Text);
                 string p_date = datepurchased.Text;
                 con.Open();
-                SqlCommand com = new SqlCommand("insert into books values ('" + an + "', '" + t + "', '" + a + "', '" + qty + "', '" + p_date + "')", con);
+                SqlCommand com = new SqlCommand("insert into tbl_books1(accession_number,book_title,book_author,book_price,book_quantity,book_purchase_date) values ('" + an + "', '" + t + "', '" + a + "', "+price+" ," + qty + ", '" + p_date + "')", con);
                 com.ExecuteNonQuery();
 
                 MessageBox.Show("Successfully SAVED!", "info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtno.Clear();
                 txttitle.Clear();
                 txtauthor.Clear();
+                txtprice.Clear();
+                txtqty.Clear();
+
 
                 con.Close();
                 loadDatagrid();
@@ -71,10 +75,17 @@ namespace LoginForm
                 string no;
                 no = txtno.Text;
 
-                SqlCommand com = new SqlCommand("update books set title = '" + txttitle.Text + "', author='" + txtauthor.Text + "', quantity = "+txtqty.Text+", purchase_date = '"+datepurchased.Text+"' where accession_number = '" + no + "'", con);
+                SqlCommand com = new SqlCommand("update tbl_books1 set book_title = '" + txttitle.Text + "', book_author='" + txtauthor.Text + "', book_price = "+txtprice.Text+", book_quantity = "+txtqty.Text+", book_purchase_date = '"+datepurchased.Text+"' where accession_number = '" + no + "'", con);
                 com.ExecuteNonQuery();
 
                 MessageBox.Show("Successfuly UPDATED!", "info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                //clear fields
+                txtno.Clear();
+                txttitle.Clear();
+                txtauthor.Clear();
+                txtprice.Clear();
+                txtqty.Clear();
                 con.Close();
                 loadDatagrid();
             }
@@ -84,16 +95,18 @@ namespace LoginForm
         private void grid1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             txtno.Text = grid1.Rows[e.RowIndex].Cells["accession_number"].Value.ToString();
-            txttitle.Text = grid1.Rows[e.RowIndex].Cells["title"].Value.ToString();
-            txtauthor.Text = grid1.Rows[e.RowIndex].Cells["author"].Value.ToString();
-            txtqty.Text = grid1.Rows[e.RowIndex].Cells["quantity"].Value.ToString();
+            txttitle.Text = grid1.Rows[e.RowIndex].Cells["book_title"].Value.ToString();
+            txtauthor.Text = grid1.Rows[e.RowIndex].Cells["book_author"].Value.ToString();
+            txtprice.Text = grid1.Rows[e.RowIndex].Cells["book_price"].Value.ToString();
+            txtqty.Text = grid1.Rows[e.RowIndex].Cells["book_quantity"].Value.ToString();
+            datepurchased.Text = grid1.Rows[e.RowIndex].Cells["book_purchase_date"].Value.ToString();
         }
 
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
             con.Open();
-            SqlCommand com = new SqlCommand("select * from books where title like '%" + txtSearch.Text + "%'", con);
+            SqlCommand com = new SqlCommand("select * from tbl_books1 where book_title like '%" + txtSearch.Text + "%'", con);
             com.ExecuteNonQuery();
 
             SqlDataAdapter adap = new SqlDataAdapter(com);
@@ -115,10 +128,16 @@ namespace LoginForm
                 DialogResult dr = MessageBox.Show("Are you sure you want to delete this?", "Confirm Deletion", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (dr == DialogResult.Yes)
                 {
-                    SqlCommand com = new SqlCommand("delete from books where accession_number = '" + num + "'", con);
+                    SqlCommand com = new SqlCommand("delete from tbl_books1 where accession_number = '" + num + "'", con);
                     com.ExecuteNonQuery();
                     MessageBox.Show("Successfully DELETE!", "info", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+                    //clear fields
+                    txtno.Clear();
+                    txttitle.Clear();
+                    txtauthor.Clear();
+                    txtprice.Clear();
+                    txtqty.Clear();
                 }
                 else
                 {
@@ -135,13 +154,14 @@ namespace LoginForm
             txttitle.Clear();
             txtauthor.Clear();
             txtSearch.Clear();
+            txtprice.Clear();
             txtqty.Clear();
         }
 
         private void Books_Load(object sender, EventArgs e)
         {
             con.Open();
-            SqlCommand com = new SqlCommand("select * from books order by accession_number asc", con);
+            SqlCommand com = new SqlCommand("select * from tbl_books1 order by accession_number asc", con);
             com.ExecuteNonQuery();
 
             SqlDataAdapter adap = new SqlDataAdapter(com);

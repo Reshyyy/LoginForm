@@ -95,6 +95,7 @@
             this.cmbBooks.Name = "cmbBooks";
             this.cmbBooks.Size = new System.Drawing.Size(378, 23);
             this.cmbBooks.TabIndex = 12;
+            this.cmbBooks.SelectedIndexChanged += new System.EventHandler(this.cmbBooks_SelectedIndexChanged);
             // 
             // txtEmail
             // 
