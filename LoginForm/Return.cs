@@ -25,7 +25,7 @@ namespace LoginForm
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;
 
-            cmd.CommandText = "select * from BorrowBook where std_number = '"+txtenteridno.Text+"' and return_date IS NULL";
+            cmd.CommandText = "select * from BorrowBook1 where std_number = '"+txtenteridno.Text+"' and return_date IS NULL";
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataSet ds = new DataSet();
             da.Fill(ds);
@@ -49,9 +49,16 @@ namespace LoginForm
             cmd.Connection = con;
 
             con.Open();
-            cmd.CommandText = "update BorrowBook set return_date = '"+dtreturndate.Text+"' where std_number = '"+txtenteridno.Text+"' and id = "+rowid+" ";
+            cmd.CommandText = "update BorrowBook1 set return_date = '"+dtreturndate.Value+"' where std_number = '"+txtenteridno.Text+"' and id = "+rowid+" ";
             cmd.ExecuteNonQuery();
+
+            //increase inventory
+            SqlCommand cmd1 = new SqlCommand();
+            cmd1.Connection = con;
+            cmd1.CommandText = "update tbl_books1 set book_quantity = book_quantity + 1 where book_title='"+txtBookName.Text+"'";
+            cmd1.ExecuteNonQuery();
             con.Close();
+
 
             MessageBox.Show("Returned Successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             Return_Load(this, null);

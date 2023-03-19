@@ -47,7 +47,7 @@ namespace LoginForm
                 //----------------------
                 //Code to Count how many book has been issued on this ID Number
 
-                cmd.CommandText = "select count(std_number) from BorrowBook where std_number = '" + eidno + "' and return_date is null";
+                cmd.CommandText = "select count(std_number) from BorrowBook1 where std_number = '" + eidno + "' and return_date is null";
                 SqlDataAdapter DA1 = new SqlDataAdapter(cmd);
                 DataSet DS1 = new DataSet();
                 DA1.Fill(DS1);
@@ -108,7 +108,7 @@ namespace LoginForm
                     Int64 std_contact = Int64.Parse(txtContactNumber.Text);
                     String std_email = txtEmail.Text;
                     String book_name = cmbBooks.Text;
-                    String borrow_date = dateTimePicker.Text;
+                    DateTime borrow_date = dateTimePicker.Value;
 
                     String eidno = txtenteridno.Text;
                     SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-UOSHB5L;Initial Catalog=LoginFormTest;Integrated Security=True");
@@ -134,18 +134,26 @@ namespace LoginForm
                     {
                         SqlCommand cmd = new SqlCommand();
                         cmd.Connection = con;
-                        cmd.CommandText = "insert into BorrowBook (std_name,std_number,std_dept,std_contact,std_email,book_name,borrow_date) values ('" + std_name + "', '" + std_number + "',  '" + std_dept + "', " + std_contact + ", '" + std_email + "', '" + book_name + "', '" + borrow_date + "')";
+                        cmd.CommandText = "insert into BorrowBook1 (std_name,std_number,std_dept,std_contact,std_email,book_name,borrow_date) values ('" + std_name + "', '" + std_number + "',  '" + std_dept + "', " + std_contact + ", '" + std_email + "', '" + book_name + "', '" + borrow_date + "')";
                         cmd.ExecuteNonQuery();
 
                         //decrease quantity
                         SqlCommand cmd1 = new SqlCommand();
-                        cmd.Connection = con;
-                        //con.Open();
-                        cmd.CommandText = "update tbl_books1 set book_quantity = book_quantity - 1 where book_title = '" + cmbBooks.SelectedItem + "'";
-                        cmd.ExecuteNonQuery();
+                        cmd1.Connection = con;
+                        cmd1.CommandText = "update tbl_books1 set book_quantity = book_quantity - 1 where book_title = '" + cmbBooks.SelectedItem + "'";
+                        cmd1.ExecuteNonQuery();
                         con.Close();
 
                         MessageBox.Show("Book Borrowed.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        //clear fields
+                        txtStudentName.Clear();
+                        txtDepartment.Clear();
+                        txtContactNumber.Clear();
+                        txtEmail.Clear();
+                        txtenteridno.Clear();
+
+
 
                     }
                     else

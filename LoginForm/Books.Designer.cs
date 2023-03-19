@@ -275,7 +275,8 @@
             this.grid1.RowTemplate.Height = 25;
             this.grid1.Size = new System.Drawing.Size(676, 212);
             this.grid1.TabIndex = 0;
-            this.grid1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid1_CellContentClick);
+            this.grid1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid1_CellClick);
+            //this.grid1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid1_CellContentClick);
             // 
             // Books
             // 

@@ -127,17 +127,17 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Courier New", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(235, 39);
+            this.label1.Location = new System.Drawing.Point(150, 43);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(91, 36);
+            this.label1.Size = new System.Drawing.Size(281, 36);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Menu";
+            this.label1.Text = "Library System";
             // 
             // btnBooks
             // 
             this.btnBooks.BackgroundImage = global::LoginForm.Properties.Resources.book_img;
             this.btnBooks.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnBooks.Location = new System.Drawing.Point(150, 91);
+            this.btnBooks.Location = new System.Drawing.Point(161, 94);
             this.btnBooks.Name = "btnBooks";
             this.btnBooks.Size = new System.Drawing.Size(103, 79);
             this.btnBooks.TabIndex = 14;
@@ -147,7 +147,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(184, 181);
+            this.label2.Location = new System.Drawing.Point(195, 184);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(39, 15);
             this.label2.TabIndex = 15;
@@ -157,7 +157,7 @@
             // 
             this.btnBorrower.BackgroundImage = global::LoginForm.Properties.Resources.borrower;
             this.btnBorrower.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnBorrower.Location = new System.Drawing.Point(299, 91);
+            this.btnBorrower.Location = new System.Drawing.Point(310, 94);
             this.btnBorrower.Name = "btnBorrower";
             this.btnBorrower.Size = new System.Drawing.Size(103, 79);
             this.btnBorrower.TabIndex = 16;
@@ -167,7 +167,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(323, 181);
+            this.label3.Location = new System.Drawing.Point(334, 184);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(55, 15);
             this.label3.TabIndex = 17;
@@ -177,7 +177,7 @@
             // 
             this.btnBorrowed.BackgroundImage = global::LoginForm.Properties.Resources.borrowed;
             this.btnBorrowed.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnBorrowed.Location = new System.Drawing.Point(150, 215);
+            this.btnBorrowed.Location = new System.Drawing.Point(161, 218);
             this.btnBorrowed.Name = "btnBorrowed";
             this.btnBorrowed.Size = new System.Drawing.Size(103, 79);
             this.btnBorrowed.TabIndex = 18;
@@ -188,7 +188,7 @@
             // 
             this.btnReturned.BackgroundImage = global::LoginForm.Properties.Resources.returned;
             this.btnReturned.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnReturned.Location = new System.Drawing.Point(299, 215);
+            this.btnReturned.Location = new System.Drawing.Point(310, 218);
             this.btnReturned.Name = "btnReturned";
             this.btnReturned.Size = new System.Drawing.Size(103, 79);
             this.btnReturned.TabIndex = 19;
@@ -198,7 +198,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(176, 305);
+            this.label4.Location = new System.Drawing.Point(187, 308);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(45, 15);
             this.label4.TabIndex = 20;
@@ -207,7 +207,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(330, 305);
+            this.label5.Location = new System.Drawing.Point(341, 308);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(42, 15);
             this.label5.TabIndex = 21;

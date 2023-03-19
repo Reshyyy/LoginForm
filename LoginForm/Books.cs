@@ -92,15 +92,6 @@ namespace LoginForm
             
         }
 
-        private void grid1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            txtno.Text = grid1.Rows[e.RowIndex].Cells["accession_number"].Value.ToString();
-            txttitle.Text = grid1.Rows[e.RowIndex].Cells["book_title"].Value.ToString();
-            txtauthor.Text = grid1.Rows[e.RowIndex].Cells["book_author"].Value.ToString();
-            txtprice.Text = grid1.Rows[e.RowIndex].Cells["book_price"].Value.ToString();
-            txtqty.Text = grid1.Rows[e.RowIndex].Cells["book_quantity"].Value.ToString();
-            datepurchased.Text = grid1.Rows[e.RowIndex].Cells["book_purchase_date"].Value.ToString();
-        }
 
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
@@ -173,6 +164,16 @@ namespace LoginForm
             con.Close();
 
 
+        }
+
+        private void grid1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtno.Text = grid1.Rows[e.RowIndex].Cells["accession_number"].Value.ToString();
+            txttitle.Text = grid1.Rows[e.RowIndex].Cells["book_title"].Value.ToString();
+            txtauthor.Text = grid1.Rows[e.RowIndex].Cells["book_author"].Value.ToString();
+            txtprice.Text = grid1.Rows[e.RowIndex].Cells["book_price"].Value.ToString();
+            txtqty.Text = grid1.Rows[e.RowIndex].Cells["book_quantity"].Value.ToString();
+            datepurchased.Text = grid1.Rows[e.RowIndex].Cells["book_purchase_date"].Value.ToString();
         }
     }
 }

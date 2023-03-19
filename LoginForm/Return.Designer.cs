@@ -46,7 +46,7 @@
             // 
             // btnSearchStudent
             // 
-            this.btnSearchStudent.Location = new System.Drawing.Point(551, 85);
+            this.btnSearchStudent.Location = new System.Drawing.Point(161, 90);
             this.btnSearchStudent.Name = "btnSearchStudent";
             this.btnSearchStudent.Size = new System.Drawing.Size(102, 40);
             this.btnSearchStudent.TabIndex = 15;
@@ -57,7 +57,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(432, 53);
+            this.label10.Location = new System.Drawing.Point(42, 58);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(82, 15);
             this.label10.TabIndex = 14;
@@ -65,7 +65,7 @@
             // 
             // txtenteridno
             // 
-            this.txtenteridno.Location = new System.Drawing.Point(520, 50);
+            this.txtenteridno.Location = new System.Drawing.Point(130, 55);
             this.txtenteridno.Name = "txtenteridno";
             this.txtenteridno.Size = new System.Drawing.Size(161, 23);
             this.txtenteridno.TabIndex = 13;
@@ -79,9 +79,9 @@
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(47, 157);
+            this.groupBox1.Location = new System.Drawing.Point(161, 429);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(634, 228);
+            this.groupBox1.Size = new System.Drawing.Size(608, 228);
             this.groupBox1.TabIndex = 16;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Return Book...";
@@ -152,10 +152,11 @@
             // gridReturn
             // 
             this.gridReturn.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridReturn.Location = new System.Drawing.Point(47, 404);
+            this.gridReturn.Location = new System.Drawing.Point(42, 148);
             this.gridReturn.Name = "gridReturn";
             this.gridReturn.RowTemplate.Height = 25;
-            this.gridReturn.Size = new System.Drawing.Size(634, 199);
+            this.gridReturn.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.gridReturn.Size = new System.Drawing.Size(856, 262);
             this.gridReturn.TabIndex = 17;
             this.gridReturn.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridReturn_CellClick);
             // 
@@ -163,7 +164,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(729, 640);
+            this.ClientSize = new System.Drawing.Size(946, 704);
             this.Controls.Add(this.gridReturn);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnSearchStudent);

@@ -79,6 +79,11 @@ namespace LoginForm
                 con.Close();
                 MessageBox.Show("Data Saved!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+
+                //update table view
+                Borrower_Load(this, null);
+
+                //clear fields
                 txtname.Clear();
                 txtidnumber.Clear();
                 txtdepartment.Clear();
