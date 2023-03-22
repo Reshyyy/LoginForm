@@ -29,13 +29,13 @@ namespace LoginForm
             }
         }
 
-        
+
         private void btnSearchStudent_Click(object sender, EventArgs e)
         {
             if (txtenteridno.Text != "")
             {
                 String eidno = txtenteridno.Text;
-                SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-UOSHB5L;Initial Catalog=LoginFormTest;Integrated Security=True");
+                SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-OQ7MM4J;Initial Catalog=LoginFormTest;Integrated Security=True");
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = con;
 
@@ -73,10 +73,10 @@ namespace LoginForm
             }
         }
 
-        
+
         private void Borrow_Load(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-UOSHB5L;Initial Catalog=LoginFormTest;Integrated Security=True");
+            SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-OQ7MM4J;Initial Catalog=LoginFormTest;Integrated Security=True");
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;
             con.Open();
@@ -100,7 +100,7 @@ namespace LoginForm
         {
             if (txtStudentName.Text != "")
             {
-                if (cmbBooks.SelectedIndex != -1 && count<=1000)
+                if (cmbBooks.SelectedIndex != -1 && count <= 1000)
                 {
                     String std_name = txtStudentName.Text;
                     String std_number = txtenteridno.Text;
@@ -111,21 +111,21 @@ namespace LoginForm
                     DateTime borrow_date = dateTimePicker.Value;
 
                     String eidno = txtenteridno.Text;
-                    SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-UOSHB5L;Initial Catalog=LoginFormTest;Integrated Security=True");
-                    
+                    SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-OQ7MM4J;Initial Catalog=LoginFormTest;Integrated Security=True");
+
 
                     //check
-                    int quantity=0;
+                    int quantity = 0;
                     SqlCommand cmd2 = new SqlCommand();
                     cmd2.Connection = con;
                     con.Open();
-                    cmd2.CommandText = "select * from tbl_books1 where book_title='"+cmbBooks.Text+"'";
+                    cmd2.CommandText = "select * from tbl_books1 where book_title='" + cmbBooks.Text + "'";
                     cmd2.ExecuteNonQuery();
                     DataTable dt = new DataTable();
                     SqlDataAdapter da = new SqlDataAdapter(cmd2);
                     da.Fill(dt);
 
-                    foreach(DataRow dr2 in dt.Rows)
+                    foreach (DataRow dr2 in dt.Rows)
                     {
                         quantity = Convert.ToInt32(dr2["book_quantity"].ToString());
                     }

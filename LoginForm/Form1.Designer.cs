@@ -28,245 +28,271 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblWelcome = new System.Windows.Forms.Label();
-            this.btnLoginForm = new System.Windows.Forms.Button();
-            this.btnRegisterForm = new System.Windows.Forms.Button();
-            this.panel_Login = new System.Windows.Forms.Panel();
-            this.btnLogin = new System.Windows.Forms.Button();
-            this.txtPassword = new System.Windows.Forms.TextBox();
-            this.txtUsername = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lblUsername = new System.Windows.Forms.Label();
-            this.btnExitForm = new System.Windows.Forms.Button();
-            this.btnClearForm = new System.Windows.Forms.Button();
-            this.btnRegister = new System.Windows.Forms.Button();
-            this.lblRegUsername = new System.Windows.Forms.Label();
-            this.lblRegPassword = new System.Windows.Forms.Label();
-            this.txtRegUsername = new System.Windows.Forms.TextBox();
-            this.txtRegPassword = new System.Windows.Forms.TextBox();
-            this.lblRegCPassword = new System.Windows.Forms.Label();
-            this.txtRegCPassword = new System.Windows.Forms.TextBox();
-            this.panel_Register = new System.Windows.Forms.Panel();
-            this.panel_Login.SuspendLayout();
-            this.panel_Register.SuspendLayout();
-            this.SuspendLayout();
+            lblWelcome = new Label();
+            btnLoginForm = new Button();
+            btnRegisterForm = new Button();
+            panel_Login = new Panel();
+            btnLogin = new Button();
+            txtPassword = new TextBox();
+            txtUsername = new TextBox();
+            label1 = new Label();
+            lblUsername = new Label();
+            btnExitForm = new Button();
+            btnClearForm = new Button();
+            btnRegister = new Button();
+            lblRegUsername = new Label();
+            lblRegPassword = new Label();
+            txtRegUsername = new TextBox();
+            txtRegPassword = new TextBox();
+            lblRegCPassword = new Label();
+            txtRegCPassword = new TextBox();
+            panel_Register = new Panel();
+            chkShowPassword = new CheckBox();
+            panel_Login.SuspendLayout();
+            panel_Register.SuspendLayout();
+            SuspendLayout();
             // 
             // lblWelcome
             // 
-            this.lblWelcome.AutoSize = true;
-            this.lblWelcome.BackColor = System.Drawing.Color.Transparent;
-            this.lblWelcome.Font = new System.Drawing.Font("Lucida Calligraphy", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblWelcome.ForeColor = System.Drawing.Color.SlateBlue;
-            this.lblWelcome.Location = new System.Drawing.Point(214, 15);
-            this.lblWelcome.Name = "lblWelcome";
-            this.lblWelcome.Size = new System.Drawing.Size(169, 41);
-            this.lblWelcome.TabIndex = 0;
-            this.lblWelcome.Text = "Welcome";
+            lblWelcome.AutoSize = true;
+            lblWelcome.BackColor = Color.Transparent;
+            lblWelcome.Font = new Font("Lucida Calligraphy", 24F, FontStyle.Regular, GraphicsUnit.Point);
+            lblWelcome.ForeColor = Color.SlateBlue;
+            lblWelcome.Location = new Point(245, 20);
+            lblWelcome.Name = "lblWelcome";
+            lblWelcome.Size = new Size(212, 52);
+            lblWelcome.TabIndex = 0;
+            lblWelcome.Text = "Welcome";
             // 
             // btnLoginForm
             // 
-            this.btnLoginForm.BackColor = System.Drawing.Color.MediumPurple;
-            this.btnLoginForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLoginForm.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnLoginForm.Location = new System.Drawing.Point(32, 71);
-            this.btnLoginForm.Name = "btnLoginForm";
-            this.btnLoginForm.Size = new System.Drawing.Size(138, 52);
-            this.btnLoginForm.TabIndex = 8;
-            this.btnLoginForm.Text = "LOGIN";
-            this.btnLoginForm.UseVisualStyleBackColor = false;
-            this.btnLoginForm.Click += new System.EventHandler(this.btnLoginForm_Click);
+            btnLoginForm.BackColor = Color.MediumPurple;
+            btnLoginForm.FlatStyle = FlatStyle.Flat;
+            btnLoginForm.ForeColor = SystemColors.ControlLightLight;
+            btnLoginForm.Location = new Point(37, 95);
+            btnLoginForm.Margin = new Padding(3, 4, 3, 4);
+            btnLoginForm.Name = "btnLoginForm";
+            btnLoginForm.Size = new Size(158, 69);
+            btnLoginForm.TabIndex = 8;
+            btnLoginForm.Text = "LOGIN";
+            btnLoginForm.UseVisualStyleBackColor = false;
+            btnLoginForm.Click += btnLoginForm_Click;
             // 
             // btnRegisterForm
             // 
-            this.btnRegisterForm.BackColor = System.Drawing.Color.Plum;
-            this.btnRegisterForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegisterForm.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnRegisterForm.Location = new System.Drawing.Point(176, 71);
-            this.btnRegisterForm.Name = "btnRegisterForm";
-            this.btnRegisterForm.Size = new System.Drawing.Size(138, 52);
-            this.btnRegisterForm.TabIndex = 9;
-            this.btnRegisterForm.Text = "REGISTER";
-            this.btnRegisterForm.UseVisualStyleBackColor = false;
-            this.btnRegisterForm.Click += new System.EventHandler(this.btnRegisterForm_Click);
+            btnRegisterForm.BackColor = Color.Plum;
+            btnRegisterForm.FlatStyle = FlatStyle.Flat;
+            btnRegisterForm.ForeColor = Color.WhiteSmoke;
+            btnRegisterForm.Location = new Point(201, 95);
+            btnRegisterForm.Margin = new Padding(3, 4, 3, 4);
+            btnRegisterForm.Name = "btnRegisterForm";
+            btnRegisterForm.Size = new Size(158, 69);
+            btnRegisterForm.TabIndex = 9;
+            btnRegisterForm.Text = "REGISTER";
+            btnRegisterForm.UseVisualStyleBackColor = false;
+            btnRegisterForm.Click += btnRegisterForm_Click;
             // 
             // panel_Login
             // 
-            this.panel_Login.BackColor = System.Drawing.Color.Tan;
-            this.panel_Login.Controls.Add(this.btnLogin);
-            this.panel_Login.Controls.Add(this.txtPassword);
-            this.panel_Login.Controls.Add(this.txtUsername);
-            this.panel_Login.Controls.Add(this.label1);
-            this.panel_Login.Controls.Add(this.lblUsername);
-            this.panel_Login.Location = new System.Drawing.Point(31, 126);
-            this.panel_Login.Name = "panel_Login";
-            this.panel_Login.Size = new System.Drawing.Size(511, 243);
-            this.panel_Login.TabIndex = 10;
+            panel_Login.BackColor = Color.Tan;
+            panel_Login.Controls.Add(chkShowPassword);
+            panel_Login.Controls.Add(btnLogin);
+            panel_Login.Controls.Add(txtPassword);
+            panel_Login.Controls.Add(txtUsername);
+            panel_Login.Controls.Add(label1);
+            panel_Login.Controls.Add(lblUsername);
+            panel_Login.Location = new Point(35, 168);
+            panel_Login.Margin = new Padding(3, 4, 3, 4);
+            panel_Login.Name = "panel_Login";
+            panel_Login.Size = new Size(584, 324);
+            panel_Login.TabIndex = 10;
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(249, 122);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(84, 38);
-            this.btnLogin.TabIndex = 13;
-            this.btnLogin.Text = "Login";
-            this.btnLogin.UseVisualStyleBackColor = true;
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click_1);
+            btnLogin.Location = new Point(285, 163);
+            btnLogin.Margin = new Padding(3, 4, 3, 4);
+            btnLogin.Name = "btnLogin";
+            btnLogin.Size = new Size(96, 51);
+            btnLogin.TabIndex = 13;
+            btnLogin.Text = "Login";
+            btnLogin.UseVisualStyleBackColor = true;
+            btnLogin.Click += btnLogin_Click_1;
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(198, 84);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(218, 23);
-            this.txtPassword.TabIndex = 11;
+            txtPassword.Location = new Point(226, 112);
+            txtPassword.Margin = new Padding(3, 4, 3, 4);
+            txtPassword.Name = "txtPassword";
+            txtPassword.PasswordChar = '*';
+            txtPassword.Size = new Size(249, 27);
+            txtPassword.TabIndex = 11;
             // 
             // txtUsername
             // 
-            this.txtUsername.Location = new System.Drawing.Point(198, 46);
-            this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(218, 23);
-            this.txtUsername.TabIndex = 10;
+            txtUsername.Location = new Point(226, 61);
+            txtUsername.Margin = new Padding(3, 4, 3, 4);
+            txtUsername.Name = "txtUsername";
+            txtUsername.Size = new Size(249, 27);
+            txtUsername.TabIndex = 10;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(127, 86);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 15);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "Password";
+            label1.AutoSize = true;
+            label1.Location = new Point(145, 115);
+            label1.Name = "label1";
+            label1.Size = new Size(70, 20);
+            label1.TabIndex = 9;
+            label1.Text = "Password";
             // 
             // lblUsername
             // 
-            this.lblUsername.AutoSize = true;
-            this.lblUsername.Location = new System.Drawing.Point(127, 50);
-            this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(60, 15);
-            this.lblUsername.TabIndex = 8;
-            this.lblUsername.Text = "Username";
+            lblUsername.AutoSize = true;
+            lblUsername.Location = new Point(145, 67);
+            lblUsername.Name = "lblUsername";
+            lblUsername.Size = new Size(75, 20);
+            lblUsername.TabIndex = 8;
+            lblUsername.Text = "Username";
             // 
             // btnExitForm
             // 
-            this.btnExitForm.BackColor = System.Drawing.Color.IndianRed;
-            this.btnExitForm.ForeColor = System.Drawing.Color.White;
-            this.btnExitForm.Location = new System.Drawing.Point(458, 85);
-            this.btnExitForm.Name = "btnExitForm";
-            this.btnExitForm.Size = new System.Drawing.Size(84, 38);
-            this.btnExitForm.TabIndex = 14;
-            this.btnExitForm.Text = "Exit";
-            this.btnExitForm.UseVisualStyleBackColor = false;
-            this.btnExitForm.Click += new System.EventHandler(this.btnExitForm_Click);
+            btnExitForm.BackColor = Color.IndianRed;
+            btnExitForm.ForeColor = Color.White;
+            btnExitForm.Location = new Point(523, 113);
+            btnExitForm.Margin = new Padding(3, 4, 3, 4);
+            btnExitForm.Name = "btnExitForm";
+            btnExitForm.Size = new Size(96, 51);
+            btnExitForm.TabIndex = 14;
+            btnExitForm.Text = "Exit";
+            btnExitForm.UseVisualStyleBackColor = false;
+            btnExitForm.Click += btnExitForm_Click;
             // 
             // btnClearForm
             // 
-            this.btnClearForm.BackColor = System.Drawing.Color.LightBlue;
-            this.btnClearForm.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.btnClearForm.Location = new System.Drawing.Point(368, 85);
-            this.btnClearForm.Name = "btnClearForm";
-            this.btnClearForm.Size = new System.Drawing.Size(84, 38);
-            this.btnClearForm.TabIndex = 12;
-            this.btnClearForm.Text = "Clear";
-            this.btnClearForm.UseVisualStyleBackColor = false;
-            this.btnClearForm.Click += new System.EventHandler(this.button3_Click);
+            btnClearForm.BackColor = Color.LightBlue;
+            btnClearForm.ForeColor = Color.MidnightBlue;
+            btnClearForm.Location = new Point(421, 113);
+            btnClearForm.Margin = new Padding(3, 4, 3, 4);
+            btnClearForm.Name = "btnClearForm";
+            btnClearForm.Size = new Size(96, 51);
+            btnClearForm.TabIndex = 12;
+            btnClearForm.Text = "Clear";
+            btnClearForm.UseVisualStyleBackColor = false;
+            btnClearForm.Click += button3_Click;
             // 
             // btnRegister
             // 
-            this.btnRegister.Location = new System.Drawing.Point(249, 167);
-            this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(84, 38);
-            this.btnRegister.TabIndex = 13;
-            this.btnRegister.Text = "Register";
-            this.btnRegister.UseVisualStyleBackColor = true;
-            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
+            btnRegister.Location = new Point(285, 223);
+            btnRegister.Margin = new Padding(3, 4, 3, 4);
+            btnRegister.Name = "btnRegister";
+            btnRegister.Size = new Size(96, 51);
+            btnRegister.TabIndex = 13;
+            btnRegister.Text = "Register";
+            btnRegister.UseVisualStyleBackColor = true;
+            btnRegister.Click += btnRegister_Click;
             // 
             // lblRegUsername
             // 
-            this.lblRegUsername.AutoSize = true;
-            this.lblRegUsername.Location = new System.Drawing.Point(129, 50);
-            this.lblRegUsername.Name = "lblRegUsername";
-            this.lblRegUsername.Size = new System.Drawing.Size(60, 15);
-            this.lblRegUsername.TabIndex = 15;
-            this.lblRegUsername.Text = "Username";
+            lblRegUsername.AutoSize = true;
+            lblRegUsername.Location = new Point(147, 67);
+            lblRegUsername.Name = "lblRegUsername";
+            lblRegUsername.Size = new Size(75, 20);
+            lblRegUsername.TabIndex = 15;
+            lblRegUsername.Text = "Username";
             // 
             // lblRegPassword
             // 
-            this.lblRegPassword.AutoSize = true;
-            this.lblRegPassword.Location = new System.Drawing.Point(130, 87);
-            this.lblRegPassword.Name = "lblRegPassword";
-            this.lblRegPassword.Size = new System.Drawing.Size(57, 15);
-            this.lblRegPassword.TabIndex = 16;
-            this.lblRegPassword.Text = "Password";
+            lblRegPassword.AutoSize = true;
+            lblRegPassword.Location = new Point(149, 116);
+            lblRegPassword.Name = "lblRegPassword";
+            lblRegPassword.Size = new Size(70, 20);
+            lblRegPassword.TabIndex = 16;
+            lblRegPassword.Text = "Password";
             // 
             // txtRegUsername
             // 
-            this.txtRegUsername.Location = new System.Drawing.Point(198, 46);
-            this.txtRegUsername.Name = "txtRegUsername";
-            this.txtRegUsername.Size = new System.Drawing.Size(218, 23);
-            this.txtRegUsername.TabIndex = 17;
+            txtRegUsername.Location = new Point(226, 61);
+            txtRegUsername.Margin = new Padding(3, 4, 3, 4);
+            txtRegUsername.Name = "txtRegUsername";
+            txtRegUsername.Size = new Size(249, 27);
+            txtRegUsername.TabIndex = 17;
             // 
             // txtRegPassword
             // 
-            this.txtRegPassword.Location = new System.Drawing.Point(198, 83);
-            this.txtRegPassword.Name = "txtRegPassword";
-            this.txtRegPassword.PasswordChar = '*';
-            this.txtRegPassword.Size = new System.Drawing.Size(218, 23);
-            this.txtRegPassword.TabIndex = 18;
+            txtRegPassword.Location = new Point(226, 111);
+            txtRegPassword.Margin = new Padding(3, 4, 3, 4);
+            txtRegPassword.Name = "txtRegPassword";
+            txtRegPassword.PasswordChar = '*';
+            txtRegPassword.Size = new Size(249, 27);
+            txtRegPassword.TabIndex = 18;
             // 
             // lblRegCPassword
             // 
-            this.lblRegCPassword.AutoSize = true;
-            this.lblRegCPassword.Location = new System.Drawing.Point(85, 127);
-            this.lblRegCPassword.Name = "lblRegCPassword";
-            this.lblRegCPassword.Size = new System.Drawing.Size(104, 15);
-            this.lblRegCPassword.TabIndex = 19;
-            this.lblRegCPassword.Text = "Confirm Password";
+            lblRegCPassword.AutoSize = true;
+            lblRegCPassword.Location = new Point(97, 169);
+            lblRegCPassword.Name = "lblRegCPassword";
+            lblRegCPassword.Size = new Size(127, 20);
+            lblRegCPassword.TabIndex = 19;
+            lblRegCPassword.Text = "Confirm Password";
             // 
             // txtRegCPassword
             // 
-            this.txtRegCPassword.Location = new System.Drawing.Point(198, 124);
-            this.txtRegCPassword.Name = "txtRegCPassword";
-            this.txtRegCPassword.PasswordChar = '*';
-            this.txtRegCPassword.Size = new System.Drawing.Size(218, 23);
-            this.txtRegCPassword.TabIndex = 20;
+            txtRegCPassword.Location = new Point(226, 165);
+            txtRegCPassword.Margin = new Padding(3, 4, 3, 4);
+            txtRegCPassword.Name = "txtRegCPassword";
+            txtRegCPassword.PasswordChar = '*';
+            txtRegCPassword.Size = new Size(249, 27);
+            txtRegCPassword.TabIndex = 20;
             // 
             // panel_Register
             // 
-            this.panel_Register.BackColor = System.Drawing.Color.Tan;
-            this.panel_Register.Controls.Add(this.txtRegCPassword);
-            this.panel_Register.Controls.Add(this.lblRegCPassword);
-            this.panel_Register.Controls.Add(this.txtRegPassword);
-            this.panel_Register.Controls.Add(this.txtRegUsername);
-            this.panel_Register.Controls.Add(this.lblRegPassword);
-            this.panel_Register.Controls.Add(this.lblRegUsername);
-            this.panel_Register.Controls.Add(this.btnRegister);
-            this.panel_Register.Location = new System.Drawing.Point(31, 126);
-            this.panel_Register.Name = "panel_Register";
-            this.panel_Register.Size = new System.Drawing.Size(511, 243);
-            this.panel_Register.TabIndex = 11;
+            panel_Register.BackColor = Color.Tan;
+            panel_Register.Controls.Add(txtRegCPassword);
+            panel_Register.Controls.Add(lblRegCPassword);
+            panel_Register.Controls.Add(txtRegPassword);
+            panel_Register.Controls.Add(txtRegUsername);
+            panel_Register.Controls.Add(lblRegPassword);
+            panel_Register.Controls.Add(lblRegUsername);
+            panel_Register.Controls.Add(btnRegister);
+            panel_Register.Location = new Point(35, 168);
+            panel_Register.Margin = new Padding(3, 4, 3, 4);
+            panel_Register.Name = "panel_Register";
+            panel_Register.Size = new Size(584, 324);
+            panel_Register.TabIndex = 11;
+            // 
+            // chkShowPassword
+            // 
+            chkShowPassword.AutoSize = true;
+            chkShowPassword.Location = new Point(483, 116);
+            chkShowPassword.Name = "chkShowPassword";
+            chkShowPassword.Size = new Size(67, 24);
+            chkShowPassword.TabIndex = 14;
+            chkShowPassword.Text = "Show";
+            chkShowPassword.UseVisualStyleBackColor = true;
+            chkShowPassword.CheckedChanged += chkShowPassword_CheckedChanged;
             // 
             // LoginForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::LoginForm.Properties.Resources.lain_kobeni_bg;
-            this.ClientSize = new System.Drawing.Size(581, 405);
-            this.Controls.Add(this.panel_Login);
-            this.Controls.Add(this.panel_Register);
-            this.Controls.Add(this.btnRegisterForm);
-            this.Controls.Add(this.btnLoginForm);
-            this.Controls.Add(this.lblWelcome);
-            this.Controls.Add(this.btnClearForm);
-            this.Controls.Add(this.btnExitForm);
-            this.Name = "LoginForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "LoginForm";
-            this.panel_Login.ResumeLayout(false);
-            this.panel_Login.PerformLayout();
-            this.panel_Register.ResumeLayout(false);
-            this.panel_Register.PerformLayout();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = Properties.Resources.lain_kobeni_bg;
+            ClientSize = new Size(664, 540);
+            Controls.Add(panel_Login);
+            Controls.Add(panel_Register);
+            Controls.Add(btnRegisterForm);
+            Controls.Add(btnLoginForm);
+            Controls.Add(lblWelcome);
+            Controls.Add(btnClearForm);
+            Controls.Add(btnExitForm);
+            Margin = new Padding(3, 4, 3, 4);
+            Name = "LoginForm";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "LoginForm";
+            panel_Login.ResumeLayout(false);
+            panel_Login.PerformLayout();
+            panel_Register.ResumeLayout(false);
+            panel_Register.PerformLayout();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -290,5 +316,6 @@
         private Label lblRegPassword;
         private Label lblRegUsername;
         private Button btnRegister;
+        private CheckBox chkShowPassword;
     }
 }

@@ -15,7 +15,7 @@ namespace LoginForm
             //OleDbCommand cmd = new OleDbCommand();
             //OleDbDataAdapter da = new OleDbDataAdapter();
         }
-        SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-UOSHB5L;Initial Catalog=LoginFormTest;Integrated Security=True");
+        SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-OQ7MM4J;Initial Catalog=LoginFormTest;Integrated Security=True");
 
 
         private void btnLogin_Click_1(object sender, EventArgs e)
@@ -125,5 +125,17 @@ namespace LoginForm
             Application.Exit();
         }
 
+        private void chkShowPassword_CheckedChanged(object sender, EventArgs e)
+        {
+            
+            if(chkShowPassword.Checked)
+            {
+                txtPassword.PasswordChar = '\0';
+            }
+            else
+            {
+                txtPassword.PasswordChar = '*';
+            }
+        }
     }
 }

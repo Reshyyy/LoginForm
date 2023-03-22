@@ -16,7 +16,7 @@ namespace LoginForm
         private SqlConnection con;
         public MenuForm()
         {
-            con = new SqlConnection(@"Data Source=DESKTOP-UOSHB5L;Initial Catalog=LoginFormTest;Integrated Security=True");
+            con = new SqlConnection(@"Data Source=DESKTOP-OQ7MM4J;Initial Catalog=LoginFormTest;Integrated Security=True");
             InitializeComponent();
         }
 

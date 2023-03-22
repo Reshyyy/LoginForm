@@ -28,215 +28,214 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.booksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.borrowerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.transactionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.borrowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.returnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnBooks = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btnBorrower = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.btnBorrowed = new System.Windows.Forms.Button();
-            this.btnReturned = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.menuStrip1.SuspendLayout();
-            this.SuspendLayout();
+            menuStrip1 = new MenuStrip();
+            fileToolStripMenuItem = new ToolStripMenuItem();
+            booksToolStripMenuItem = new ToolStripMenuItem();
+            borrowerToolStripMenuItem = new ToolStripMenuItem();
+            transactionToolStripMenuItem = new ToolStripMenuItem();
+            borrowToolStripMenuItem = new ToolStripMenuItem();
+            returnToolStripMenuItem = new ToolStripMenuItem();
+            reportToolStripMenuItem = new ToolStripMenuItem();
+            logoutToolStripMenuItem = new ToolStripMenuItem();
+            label1 = new Label();
+            btnBooks = new Button();
+            label2 = new Label();
+            btnBorrower = new Button();
+            label3 = new Label();
+            btnBorrowed = new Button();
+            btnReturned = new Button();
+            label4 = new Label();
+            label5 = new Label();
+            menuStrip1.SuspendLayout();
+            SuspendLayout();
             // 
             // menuStrip1
             // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileToolStripMenuItem,
-            this.transactionToolStripMenuItem,
-            this.reportToolStripMenuItem,
-            this.logoutToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(564, 24);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
+            menuStrip1.ImageScalingSize = new Size(20, 20);
+            menuStrip1.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem, transactionToolStripMenuItem, reportToolStripMenuItem, logoutToolStripMenuItem });
+            menuStrip1.Location = new Point(0, 0);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.Padding = new Padding(7, 3, 0, 3);
+            menuStrip1.Size = new Size(645, 30);
+            menuStrip1.TabIndex = 0;
+            menuStrip1.Text = "menuStrip1";
             // 
             // fileToolStripMenuItem
             // 
-            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.booksToolStripMenuItem,
-            this.borrowerToolStripMenuItem});
-            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
-            this.fileToolStripMenuItem.Text = "File";
+            fileToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { booksToolStripMenuItem, borrowerToolStripMenuItem });
+            fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            fileToolStripMenuItem.Size = new Size(46, 24);
+            fileToolStripMenuItem.Text = "File";
             // 
             // booksToolStripMenuItem
             // 
-            this.booksToolStripMenuItem.Name = "booksToolStripMenuItem";
-            this.booksToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
-            this.booksToolStripMenuItem.Text = "Books";
-            this.booksToolStripMenuItem.Click += new System.EventHandler(this.booksToolStripMenuItem_Click);
+            booksToolStripMenuItem.Name = "booksToolStripMenuItem";
+            booksToolStripMenuItem.Size = new Size(153, 26);
+            booksToolStripMenuItem.Text = "Books";
+            booksToolStripMenuItem.Click += booksToolStripMenuItem_Click;
             // 
             // borrowerToolStripMenuItem
             // 
-            this.borrowerToolStripMenuItem.Name = "borrowerToolStripMenuItem";
-            this.borrowerToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
-            this.borrowerToolStripMenuItem.Text = "Borrower";
-            this.borrowerToolStripMenuItem.Click += new System.EventHandler(this.borrowerToolStripMenuItem_Click);
+            borrowerToolStripMenuItem.Name = "borrowerToolStripMenuItem";
+            borrowerToolStripMenuItem.Size = new Size(153, 26);
+            borrowerToolStripMenuItem.Text = "Borrower";
+            borrowerToolStripMenuItem.Click += borrowerToolStripMenuItem_Click;
             // 
             // transactionToolStripMenuItem
             // 
-            this.transactionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.borrowToolStripMenuItem,
-            this.returnToolStripMenuItem});
-            this.transactionToolStripMenuItem.Name = "transactionToolStripMenuItem";
-            this.transactionToolStripMenuItem.Size = new System.Drawing.Size(79, 20);
-            this.transactionToolStripMenuItem.Text = "Transaction";
-            this.transactionToolStripMenuItem.Click += new System.EventHandler(this.transactionToolStripMenuItem_Click);
+            transactionToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { borrowToolStripMenuItem, returnToolStripMenuItem });
+            transactionToolStripMenuItem.Name = "transactionToolStripMenuItem";
+            transactionToolStripMenuItem.Size = new Size(98, 24);
+            transactionToolStripMenuItem.Text = "Transaction";
+            transactionToolStripMenuItem.Click += transactionToolStripMenuItem_Click;
             // 
             // borrowToolStripMenuItem
             // 
-            this.borrowToolStripMenuItem.Name = "borrowToolStripMenuItem";
-            this.borrowToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
-            this.borrowToolStripMenuItem.Text = "Borrow";
-            this.borrowToolStripMenuItem.Click += new System.EventHandler(this.borrowToolStripMenuItem_Click);
+            borrowToolStripMenuItem.Name = "borrowToolStripMenuItem";
+            borrowToolStripMenuItem.Size = new Size(140, 26);
+            borrowToolStripMenuItem.Text = "Borrow";
+            borrowToolStripMenuItem.Click += borrowToolStripMenuItem_Click;
             // 
             // returnToolStripMenuItem
             // 
-            this.returnToolStripMenuItem.Name = "returnToolStripMenuItem";
-            this.returnToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
-            this.returnToolStripMenuItem.Text = "Return";
-            this.returnToolStripMenuItem.Click += new System.EventHandler(this.returnToolStripMenuItem_Click);
+            returnToolStripMenuItem.Name = "returnToolStripMenuItem";
+            returnToolStripMenuItem.Size = new Size(140, 26);
+            returnToolStripMenuItem.Text = "Return";
+            returnToolStripMenuItem.Click += returnToolStripMenuItem_Click;
             // 
             // reportToolStripMenuItem
             // 
-            this.reportToolStripMenuItem.Name = "reportToolStripMenuItem";
-            this.reportToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
-            this.reportToolStripMenuItem.Text = "Reports";
-            this.reportToolStripMenuItem.Click += new System.EventHandler(this.reportToolStripMenuItem_Click);
+            reportToolStripMenuItem.Name = "reportToolStripMenuItem";
+            reportToolStripMenuItem.Size = new Size(74, 24);
+            reportToolStripMenuItem.Text = "Reports";
+            reportToolStripMenuItem.Click += reportToolStripMenuItem_Click;
             // 
             // logoutToolStripMenuItem
             // 
-            this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
-            this.logoutToolStripMenuItem.Text = "Logout";
-            this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
+            logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
+            logoutToolStripMenuItem.Size = new Size(70, 24);
+            logoutToolStripMenuItem.Text = "Logout";
+            logoutToolStripMenuItem.Click += logoutToolStripMenuItem_Click;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Courier New", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(150, 43);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(281, 36);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Library System";
+            label1.AutoSize = true;
+            label1.Font = new Font("Courier New", 24F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Location = new Point(153, 57);
+            label1.Name = "label1";
+            label1.Size = new Size(356, 46);
+            label1.TabIndex = 1;
+            label1.Text = "Library System";
             // 
             // btnBooks
             // 
-            this.btnBooks.BackgroundImage = global::LoginForm.Properties.Resources.book_img;
-            this.btnBooks.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnBooks.Location = new System.Drawing.Point(161, 94);
-            this.btnBooks.Name = "btnBooks";
-            this.btnBooks.Size = new System.Drawing.Size(103, 79);
-            this.btnBooks.TabIndex = 14;
-            this.btnBooks.UseVisualStyleBackColor = true;
-            this.btnBooks.Click += new System.EventHandler(this.btnBooks_Click);
+            btnBooks.BackgroundImage = Properties.Resources.book_img;
+            btnBooks.BackgroundImageLayout = ImageLayout.Zoom;
+            btnBooks.Location = new Point(184, 125);
+            btnBooks.Margin = new Padding(3, 4, 3, 4);
+            btnBooks.Name = "btnBooks";
+            btnBooks.Size = new Size(118, 105);
+            btnBooks.TabIndex = 14;
+            btnBooks.UseVisualStyleBackColor = true;
+            btnBooks.Click += btnBooks_Click;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(195, 184);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(39, 15);
-            this.label2.TabIndex = 15;
-            this.label2.Text = "Books";
+            label2.AutoSize = true;
+            label2.Location = new Point(223, 245);
+            label2.Name = "label2";
+            label2.Size = new Size(49, 20);
+            label2.TabIndex = 15;
+            label2.Text = "Books";
             // 
             // btnBorrower
             // 
-            this.btnBorrower.BackgroundImage = global::LoginForm.Properties.Resources.borrower;
-            this.btnBorrower.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnBorrower.Location = new System.Drawing.Point(310, 94);
-            this.btnBorrower.Name = "btnBorrower";
-            this.btnBorrower.Size = new System.Drawing.Size(103, 79);
-            this.btnBorrower.TabIndex = 16;
-            this.btnBorrower.UseVisualStyleBackColor = true;
-            this.btnBorrower.Click += new System.EventHandler(this.btnBorrower_Click);
+            btnBorrower.BackgroundImage = Properties.Resources.student;
+            btnBorrower.BackgroundImageLayout = ImageLayout.Zoom;
+            btnBorrower.Location = new Point(354, 125);
+            btnBorrower.Margin = new Padding(3, 4, 3, 4);
+            btnBorrower.Name = "btnBorrower";
+            btnBorrower.Size = new Size(118, 105);
+            btnBorrower.TabIndex = 16;
+            btnBorrower.UseVisualStyleBackColor = true;
+            btnBorrower.Click += btnBorrower_Click;
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(334, 184);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(55, 15);
-            this.label3.TabIndex = 17;
-            this.label3.Text = "Borrower";
+            label3.AutoSize = true;
+            label3.Location = new Point(382, 245);
+            label3.Name = "label3";
+            label3.Size = new Size(70, 20);
+            label3.TabIndex = 17;
+            label3.Text = "Borrower";
             // 
             // btnBorrowed
             // 
-            this.btnBorrowed.BackgroundImage = global::LoginForm.Properties.Resources.borrowed;
-            this.btnBorrowed.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnBorrowed.Location = new System.Drawing.Point(161, 218);
-            this.btnBorrowed.Name = "btnBorrowed";
-            this.btnBorrowed.Size = new System.Drawing.Size(103, 79);
-            this.btnBorrowed.TabIndex = 18;
-            this.btnBorrowed.UseVisualStyleBackColor = true;
-            this.btnBorrowed.Click += new System.EventHandler(this.btnBorrowed_Click);
+            btnBorrowed.BackgroundImage = Properties.Resources.borrower;
+            btnBorrowed.BackgroundImageLayout = ImageLayout.Stretch;
+            btnBorrowed.Location = new Point(184, 291);
+            btnBorrowed.Margin = new Padding(3, 4, 3, 4);
+            btnBorrowed.Name = "btnBorrowed";
+            btnBorrowed.Size = new Size(118, 105);
+            btnBorrowed.TabIndex = 18;
+            btnBorrowed.UseVisualStyleBackColor = true;
+            btnBorrowed.Click += btnBorrowed_Click;
             // 
             // btnReturned
             // 
-            this.btnReturned.BackgroundImage = global::LoginForm.Properties.Resources.returned;
-            this.btnReturned.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnReturned.Location = new System.Drawing.Point(310, 218);
-            this.btnReturned.Name = "btnReturned";
-            this.btnReturned.Size = new System.Drawing.Size(103, 79);
-            this.btnReturned.TabIndex = 19;
-            this.btnReturned.UseVisualStyleBackColor = true;
-            this.btnReturned.Click += new System.EventHandler(this.btnReturned_Click);
+            btnReturned.BackgroundImage = Properties.Resources.returned;
+            btnReturned.BackgroundImageLayout = ImageLayout.Stretch;
+            btnReturned.Location = new Point(354, 291);
+            btnReturned.Margin = new Padding(3, 4, 3, 4);
+            btnReturned.Name = "btnReturned";
+            btnReturned.Size = new Size(118, 105);
+            btnReturned.TabIndex = 19;
+            btnReturned.UseVisualStyleBackColor = true;
+            btnReturned.Click += btnReturned_Click;
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(187, 308);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(45, 15);
-            this.label4.TabIndex = 20;
-            this.label4.Text = "Borrow";
+            label4.AutoSize = true;
+            label4.Location = new Point(214, 411);
+            label4.Name = "label4";
+            label4.Size = new Size(57, 20);
+            label4.TabIndex = 20;
+            label4.Text = "Borrow";
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(341, 308);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(42, 15);
-            this.label5.TabIndex = 21;
-            this.label5.Text = "Return";
+            label5.AutoSize = true;
+            label5.Location = new Point(390, 411);
+            label5.Name = "label5";
+            label5.Size = new Size(52, 20);
+            label5.TabIndex = 21;
+            label5.Text = "Return";
             // 
             // MenuForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(564, 366);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.btnReturned);
-            this.Controls.Add(this.btnBorrowed);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.btnBorrower);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.btnBooks);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
-            this.Name = "MenuForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "MenuForm";
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(192, 192, 255);
+            ClientSize = new Size(645, 488);
+            Controls.Add(label5);
+            Controls.Add(label4);
+            Controls.Add(btnReturned);
+            Controls.Add(btnBorrowed);
+            Controls.Add(label3);
+            Controls.Add(btnBorrower);
+            Controls.Add(label2);
+            Controls.Add(btnBooks);
+            Controls.Add(label1);
+            Controls.Add(menuStrip1);
+            MainMenuStrip = menuStrip1;
+            Margin = new Padding(3, 4, 3, 4);
+            Name = "MenuForm";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "MenuForm";
+            menuStrip1.ResumeLayout(false);
+            menuStrip1.PerformLayout();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

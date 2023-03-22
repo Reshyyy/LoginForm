@@ -21,7 +21,7 @@ namespace LoginForm
         private void Reports_Load(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection();
-            con.ConnectionString = "Data Source=DESKTOP-UOSHB5L;Initial Catalog=LoginFormTest;Integrated Security=True";
+            con.ConnectionString = "Data Source=DESKTOP-OQ7MM4J;Initial Catalog=LoginFormTest;Integrated Security=True";
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;
 
@@ -31,24 +31,24 @@ namespace LoginForm
             da.Fill(ds);
             dg_reports1.DataSource = ds.Tables[0];
 
-            
-            
+
+
             cmd.CommandText = "select * from BorrowBook1 where return_date is not null";
             SqlDataAdapter da1 = new SqlDataAdapter(cmd);
             DataSet ds1 = new DataSet();
             da1.Fill(ds1);
             dg_reports2.DataSource = ds1.Tables[0];
-            
+
         }
 
 
         private void btnFilter_Click(object sender, EventArgs e)
         {
             ///*
-            if(dateTimePicker1.Value <= dateTimePicker2.Value)
-            { 
+            if (dateTimePicker1.Value <= dateTimePicker2.Value)
+            {
                 SqlConnection con = new SqlConnection();
-                con.ConnectionString = "Data Source=DESKTOP-UOSHB5L;Initial Catalog=LoginFormTest;Integrated Security=True";
+                con.ConnectionString = "Data Source=DESKTOP-OQ7MM4J;Initial Catalog=LoginFormTest;Integrated Security=True";
                 SqlDataAdapter sdf = new SqlDataAdapter("select * from BorrowBook1 where borrow_date between '" + dateTimePicker1.Value + "' and '" + dateTimePicker2.Value + "' ", con);
                 DataTable sd = new DataTable();
                 sdf.Fill(sd);
@@ -67,9 +67,9 @@ namespace LoginForm
             {
                 MessageBox.Show("From Date must be lesser than To Date", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            
+
             ///
-            
+
             /*
             DateTime fromdate = Convert.ToDateTime(dateTimePicker1.Text);
             DateTime todate = Convert.ToDateTime(dateTimePicker2.Text);
@@ -94,6 +94,11 @@ namespace LoginForm
 
             } 
             */
+
+        }
+
+        private void dg_reports1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }

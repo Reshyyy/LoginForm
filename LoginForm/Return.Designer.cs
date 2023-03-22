@@ -28,157 +28,170 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnSearchStudent = new System.Windows.Forms.Button();
-            this.label10 = new System.Windows.Forms.Label();
-            this.txtenteridno = new System.Windows.Forms.TextBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnReturn = new System.Windows.Forms.Button();
-            this.dtreturndate = new System.Windows.Forms.DateTimePicker();
-            this.txtBorrowedDate = new System.Windows.Forms.TextBox();
-            this.txtBookName = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.gridReturn = new System.Windows.Forms.DataGridView();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridReturn)).BeginInit();
-            this.SuspendLayout();
+            btnSearchStudent = new Button();
+            label10 = new Label();
+            txtenteridno = new TextBox();
+            groupBox1 = new GroupBox();
+            btnReturn = new Button();
+            dtreturndate = new DateTimePicker();
+            txtBorrowedDate = new TextBox();
+            txtBookName = new TextBox();
+            label8 = new Label();
+            label4 = new Label();
+            label2 = new Label();
+            gridReturn = new DataGridView();
+            groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)gridReturn).BeginInit();
+            SuspendLayout();
             // 
             // btnSearchStudent
             // 
-            this.btnSearchStudent.Location = new System.Drawing.Point(161, 90);
-            this.btnSearchStudent.Name = "btnSearchStudent";
-            this.btnSearchStudent.Size = new System.Drawing.Size(102, 40);
-            this.btnSearchStudent.TabIndex = 15;
-            this.btnSearchStudent.Text = "Search Student";
-            this.btnSearchStudent.UseVisualStyleBackColor = true;
-            this.btnSearchStudent.Click += new System.EventHandler(this.btnSearchStudent_Click);
+            btnSearchStudent.Location = new Point(190, 120);
+            btnSearchStudent.Margin = new Padding(3, 4, 3, 4);
+            btnSearchStudent.Name = "btnSearchStudent";
+            btnSearchStudent.Size = new Size(117, 53);
+            btnSearchStudent.TabIndex = 15;
+            btnSearchStudent.Text = "Search Student";
+            btnSearchStudent.UseVisualStyleBackColor = true;
+            btnSearchStudent.Click += btnSearchStudent_Click;
             // 
             // label10
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(42, 58);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(82, 15);
-            this.label10.TabIndex = 14;
-            this.label10.Text = "ENTER ID NO.:";
+            label10.AutoSize = true;
+            label10.Location = new Point(48, 77);
+            label10.Name = "label10";
+            label10.Size = new Size(104, 20);
+            label10.TabIndex = 14;
+            label10.Text = "ENTER ID NO.:";
             // 
             // txtenteridno
             // 
-            this.txtenteridno.Location = new System.Drawing.Point(130, 55);
-            this.txtenteridno.Name = "txtenteridno";
-            this.txtenteridno.Size = new System.Drawing.Size(161, 23);
-            this.txtenteridno.TabIndex = 13;
+            txtenteridno.Location = new Point(155, 73);
+            txtenteridno.Margin = new Padding(3, 4, 3, 4);
+            txtenteridno.Name = "txtenteridno";
+            txtenteridno.Size = new Size(183, 27);
+            txtenteridno.TabIndex = 13;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.btnReturn);
-            this.groupBox1.Controls.Add(this.dtreturndate);
-            this.groupBox1.Controls.Add(this.txtBorrowedDate);
-            this.groupBox1.Controls.Add(this.txtBookName);
-            this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(161, 429);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(608, 228);
-            this.groupBox1.TabIndex = 16;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Return Book...";
+            groupBox1.Controls.Add(btnReturn);
+            groupBox1.Controls.Add(dtreturndate);
+            groupBox1.Controls.Add(txtBorrowedDate);
+            groupBox1.Controls.Add(txtBookName);
+            groupBox1.Controls.Add(label8);
+            groupBox1.Controls.Add(label4);
+            groupBox1.Controls.Add(label2);
+            groupBox1.Location = new Point(184, 572);
+            groupBox1.Margin = new Padding(3, 4, 3, 4);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Padding = new Padding(3, 4, 3, 4);
+            groupBox1.Size = new Size(695, 304);
+            groupBox1.TabIndex = 16;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "Return Book...";
             // 
             // btnReturn
             // 
-            this.btnReturn.Location = new System.Drawing.Point(459, 127);
-            this.btnReturn.Name = "btnReturn";
-            this.btnReturn.Size = new System.Drawing.Size(108, 44);
-            this.btnReturn.TabIndex = 14;
-            this.btnReturn.Text = "RETURN";
-            this.btnReturn.UseVisualStyleBackColor = true;
-            this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
+            btnReturn.Location = new Point(525, 169);
+            btnReturn.Margin = new Padding(3, 4, 3, 4);
+            btnReturn.Name = "btnReturn";
+            btnReturn.Size = new Size(123, 59);
+            btnReturn.TabIndex = 14;
+            btnReturn.Text = "RETURN";
+            btnReturn.UseVisualStyleBackColor = true;
+            btnReturn.Click += btnReturn_Click;
             // 
             // dtreturndate
             // 
-            this.dtreturndate.Location = new System.Drawing.Point(189, 135);
-            this.dtreturndate.Name = "dtreturndate";
-            this.dtreturndate.Size = new System.Drawing.Size(209, 23);
-            this.dtreturndate.TabIndex = 13;
+            dtreturndate.Location = new Point(216, 180);
+            dtreturndate.Margin = new Padding(3, 4, 3, 4);
+            dtreturndate.Name = "dtreturndate";
+            dtreturndate.Size = new Size(238, 27);
+            dtreturndate.TabIndex = 13;
             // 
             // txtBorrowedDate
             // 
-            this.txtBorrowedDate.Location = new System.Drawing.Point(189, 94);
-            this.txtBorrowedDate.Name = "txtBorrowedDate";
-            this.txtBorrowedDate.ReadOnly = true;
-            this.txtBorrowedDate.Size = new System.Drawing.Size(378, 23);
-            this.txtBorrowedDate.TabIndex = 9;
+            txtBorrowedDate.Location = new Point(216, 125);
+            txtBorrowedDate.Margin = new Padding(3, 4, 3, 4);
+            txtBorrowedDate.Name = "txtBorrowedDate";
+            txtBorrowedDate.ReadOnly = true;
+            txtBorrowedDate.Size = new Size(431, 27);
+            txtBorrowedDate.TabIndex = 9;
             // 
             // txtBookName
             // 
-            this.txtBookName.Location = new System.Drawing.Point(189, 54);
-            this.txtBookName.Name = "txtBookName";
-            this.txtBookName.ReadOnly = true;
-            this.txtBookName.Size = new System.Drawing.Size(378, 23);
-            this.txtBookName.TabIndex = 7;
+            txtBookName.Location = new Point(216, 72);
+            txtBookName.Margin = new Padding(3, 4, 3, 4);
+            txtBookName.Name = "txtBookName";
+            txtBookName.ReadOnly = true;
+            txtBookName.Size = new Size(431, 27);
+            txtBookName.TabIndex = 7;
             // 
             // label8
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label8.Location = new System.Drawing.Point(21, 135);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(143, 20);
-            this.label8.TabIndex = 6;
-            this.label8.Text = "Book Returned Date";
+            label8.AutoSize = true;
+            label8.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            label8.Location = new Point(24, 180);
+            label8.Name = "label8";
+            label8.Size = new Size(179, 25);
+            label8.TabIndex = 6;
+            label8.Text = "Book Returned Date";
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(21, 96);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(110, 20);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Borrowed Date";
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            label4.Location = new Point(24, 128);
+            label4.Name = "label4";
+            label4.Size = new Size(138, 25);
+            label4.TabIndex = 2;
+            label4.Text = "Borrowed Date";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(20, 54);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(87, 20);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Book Name";
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Location = new Point(23, 72);
+            label2.Name = "label2";
+            label2.Size = new Size(109, 25);
+            label2.TabIndex = 0;
+            label2.Text = "Book Name";
             // 
             // gridReturn
             // 
-            this.gridReturn.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridReturn.Location = new System.Drawing.Point(42, 148);
-            this.gridReturn.Name = "gridReturn";
-            this.gridReturn.RowTemplate.Height = 25;
-            this.gridReturn.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridReturn.Size = new System.Drawing.Size(856, 262);
-            this.gridReturn.TabIndex = 17;
-            this.gridReturn.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridReturn_CellClick);
+            gridReturn.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            gridReturn.Location = new Point(48, 197);
+            gridReturn.Margin = new Padding(3, 4, 3, 4);
+            gridReturn.Name = "gridReturn";
+            gridReturn.ReadOnly = true;
+            gridReturn.RowHeadersWidth = 51;
+            gridReturn.RowTemplate.Height = 25;
+            gridReturn.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            gridReturn.Size = new Size(978, 349);
+            gridReturn.TabIndex = 17;
+            gridReturn.CellClick += gridReturn_CellClick;
+            gridReturn.CellContentClick += gridReturn_CellContentClick;
             // 
             // Return
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(946, 704);
-            this.Controls.Add(this.gridReturn);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.btnSearchStudent);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.txtenteridno);
-            this.Name = "Return";
-            this.Text = "Return";
-            this.Load += new System.EventHandler(this.Return_Load);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridReturn)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1081, 939);
+            Controls.Add(gridReturn);
+            Controls.Add(groupBox1);
+            Controls.Add(btnSearchStudent);
+            Controls.Add(label10);
+            Controls.Add(txtenteridno);
+            Margin = new Padding(3, 4, 3, 4);
+            Name = "Return";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Return";
+            Load += Return_Load;
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)gridReturn).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

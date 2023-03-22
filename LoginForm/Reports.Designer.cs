@@ -28,164 +28,180 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dg_reports1 = new System.Windows.Forms.DataGridView();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dg_reports2 = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.btnFilter = new System.Windows.Forms.Button();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dg_reports1)).BeginInit();
-            this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dg_reports2)).BeginInit();
-            this.groupBox3.SuspendLayout();
-            this.SuspendLayout();
+            groupBox1 = new GroupBox();
+            dg_reports1 = new DataGridView();
+            groupBox2 = new GroupBox();
+            dg_reports2 = new DataGridView();
+            label1 = new Label();
+            label2 = new Label();
+            label3 = new Label();
+            label4 = new Label();
+            dateTimePicker1 = new DateTimePicker();
+            groupBox3 = new GroupBox();
+            btnFilter = new Button();
+            dateTimePicker2 = new DateTimePicker();
+            groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dg_reports1).BeginInit();
+            groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dg_reports2).BeginInit();
+            groupBox3.SuspendLayout();
+            SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.dg_reports1);
-            this.groupBox1.Location = new System.Drawing.Point(39, 54);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(974, 282);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Borrowed Books";
+            groupBox1.Controls.Add(dg_reports1);
+            groupBox1.Location = new Point(45, 72);
+            groupBox1.Margin = new Padding(3, 4, 3, 4);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Padding = new Padding(3, 4, 3, 4);
+            groupBox1.Size = new Size(1113, 376);
+            groupBox1.TabIndex = 0;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "Borrowed Books";
             // 
             // dg_reports1
             // 
-            this.dg_reports1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dg_reports1.Location = new System.Drawing.Point(17, 22);
-            this.dg_reports1.Name = "dg_reports1";
-            this.dg_reports1.RowTemplate.Height = 25;
-            this.dg_reports1.Size = new System.Drawing.Size(939, 243);
-            this.dg_reports1.TabIndex = 0;
+            dg_reports1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dg_reports1.Location = new Point(19, 29);
+            dg_reports1.Margin = new Padding(3, 4, 3, 4);
+            dg_reports1.Name = "dg_reports1";
+            dg_reports1.ReadOnly = true;
+            dg_reports1.RowHeadersWidth = 51;
+            dg_reports1.RowTemplate.Height = 25;
+            dg_reports1.Size = new Size(1073, 324);
+            dg_reports1.TabIndex = 0;
+            dg_reports1.CellContentClick += dg_reports1_CellContentClick;
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.dg_reports2);
-            this.groupBox2.Location = new System.Drawing.Point(39, 356);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(974, 282);
-            this.groupBox2.TabIndex = 1;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Returned Books";
+            groupBox2.Controls.Add(dg_reports2);
+            groupBox2.Location = new Point(45, 475);
+            groupBox2.Margin = new Padding(3, 4, 3, 4);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Padding = new Padding(3, 4, 3, 4);
+            groupBox2.Size = new Size(1113, 376);
+            groupBox2.TabIndex = 1;
+            groupBox2.TabStop = false;
+            groupBox2.Text = "Returned Books";
             // 
             // dg_reports2
             // 
-            this.dg_reports2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dg_reports2.Location = new System.Drawing.Point(19, 26);
-            this.dg_reports2.Name = "dg_reports2";
-            this.dg_reports2.RowTemplate.Height = 25;
-            this.dg_reports2.Size = new System.Drawing.Size(937, 236);
-            this.dg_reports2.TabIndex = 0;
+            dg_reports2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dg_reports2.Location = new Point(22, 35);
+            dg_reports2.Margin = new Padding(3, 4, 3, 4);
+            dg_reports2.Name = "dg_reports2";
+            dg_reports2.RowHeadersWidth = 51;
+            dg_reports2.RowTemplate.Height = 25;
+            dg_reports2.Size = new Size(1071, 315);
+            dg_reports2.TabIndex = 0;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(481, 26);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(94, 25);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "REPORTS";
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Location = new Point(550, 35);
+            label1.Name = "label1";
+            label1.Size = new Size(119, 32);
+            label1.TabIndex = 2;
+            label1.Text = "REPORTS";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(1101, 26);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(103, 25);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Filter Date";
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.Location = new Point(1258, 35);
+            label2.Name = "label2";
+            label2.Size = new Size(132, 32);
+            label2.TabIndex = 3;
+            label2.Text = "Filter Date";
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(102, 19);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 15);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "From";
+            label3.AutoSize = true;
+            label3.Location = new Point(117, 25);
+            label3.Name = "label3";
+            label3.Size = new Size(43, 20);
+            label3.TabIndex = 4;
+            label3.Text = "From";
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(109, 96);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(19, 15);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "To";
+            label4.AutoSize = true;
+            label4.Location = new Point(125, 128);
+            label4.Name = "label4";
+            label4.Size = new Size(25, 20);
+            label4.TabIndex = 4;
+            label4.Text = "To";
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.CustomFormat = "yyyy-MM-dd";
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(18, 47);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 23);
-            this.dateTimePicker1.TabIndex = 5;
+            dateTimePicker1.CustomFormat = "yyyy-MM-dd";
+            dateTimePicker1.Format = DateTimePickerFormat.Custom;
+            dateTimePicker1.Location = new Point(21, 63);
+            dateTimePicker1.Margin = new Padding(3, 4, 3, 4);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(228, 27);
+            dateTimePicker1.TabIndex = 5;
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.btnFilter);
-            this.groupBox3.Controls.Add(this.dateTimePicker2);
-            this.groupBox3.Controls.Add(this.label3);
-            this.groupBox3.Controls.Add(this.dateTimePicker1);
-            this.groupBox3.Controls.Add(this.label4);
-            this.groupBox3.Location = new System.Drawing.Point(1037, 65);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(234, 254);
-            this.groupBox3.TabIndex = 6;
-            this.groupBox3.TabStop = false;
+            groupBox3.Controls.Add(btnFilter);
+            groupBox3.Controls.Add(dateTimePicker2);
+            groupBox3.Controls.Add(label3);
+            groupBox3.Controls.Add(dateTimePicker1);
+            groupBox3.Controls.Add(label4);
+            groupBox3.Location = new Point(1185, 87);
+            groupBox3.Margin = new Padding(3, 4, 3, 4);
+            groupBox3.Name = "groupBox3";
+            groupBox3.Padding = new Padding(3, 4, 3, 4);
+            groupBox3.Size = new Size(267, 339);
+            groupBox3.TabIndex = 6;
+            groupBox3.TabStop = false;
             // 
             // btnFilter
             // 
-            this.btnFilter.Location = new System.Drawing.Point(18, 173);
-            this.btnFilter.Name = "btnFilter";
-            this.btnFilter.Size = new System.Drawing.Size(200, 53);
-            this.btnFilter.TabIndex = 7;
-            this.btnFilter.Text = "FILTER";
-            this.btnFilter.UseVisualStyleBackColor = true;
-            this.btnFilter.Click += new System.EventHandler(this.btnFilter_Click);
+            btnFilter.Location = new Point(21, 231);
+            btnFilter.Margin = new Padding(3, 4, 3, 4);
+            btnFilter.Name = "btnFilter";
+            btnFilter.Size = new Size(229, 71);
+            btnFilter.TabIndex = 7;
+            btnFilter.Text = "FILTER";
+            btnFilter.UseVisualStyleBackColor = true;
+            btnFilter.Click += btnFilter_Click;
             // 
             // dateTimePicker2
             // 
-            this.dateTimePicker2.CustomFormat = "yyyy-MM-dd";
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker2.Location = new System.Drawing.Point(18, 125);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 23);
-            this.dateTimePicker2.TabIndex = 6;
+            dateTimePicker2.CustomFormat = "yyyy-MM-dd";
+            dateTimePicker2.Format = DateTimePickerFormat.Custom;
+            dateTimePicker2.Location = new Point(21, 167);
+            dateTimePicker2.Margin = new Padding(3, 4, 3, 4);
+            dateTimePicker2.Name = "dateTimePicker2";
+            dateTimePicker2.Size = new Size(228, 27);
+            dateTimePicker2.TabIndex = 6;
             // 
             // Reports
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1298, 689);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
-            this.Name = "Reports";
-            this.Text = "Reports";
-            this.Load += new System.EventHandler(this.Reports_Load);
-            this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dg_reports1)).EndInit();
-            this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dg_reports2)).EndInit();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1483, 919);
+            Controls.Add(label2);
+            Controls.Add(groupBox3);
+            Controls.Add(label1);
+            Controls.Add(groupBox2);
+            Controls.Add(groupBox1);
+            Margin = new Padding(3, 4, 3, 4);
+            Name = "Reports";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Reports";
+            Load += Reports_Load;
+            groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dg_reports1).EndInit();
+            groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dg_reports2).EndInit();
+            groupBox3.ResumeLayout(false);
+            groupBox3.PerformLayout();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

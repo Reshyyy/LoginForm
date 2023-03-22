@@ -16,7 +16,7 @@ namespace LoginForm
         private SqlConnection con;
         public Books()
         {
-            con = new SqlConnection(@"Data Source=DESKTOP-UOSHB5L;Initial Catalog=LoginFormTest;Integrated Security=True");
+            con = new SqlConnection(@"Data Source=DESKTOP-OQ7MM4J;Initial Catalog=LoginFormTest;Integrated Security=True");
             InitializeComponent();
         }
         public void loadDatagrid()
@@ -37,7 +37,7 @@ namespace LoginForm
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            if(txtno.Text != "" && txttitle.Text != "" && txtauthor.Text != "")
+            if (txtno.Text != "" && txttitle.Text != "" && txtauthor.Text != "")
             {
                 string an = txtno.Text;
                 string t = txttitle.Text;
@@ -46,7 +46,7 @@ namespace LoginForm
                 Int64 qty = Int64.Parse(txtqty.Text);
                 string p_date = datepurchased.Text;
                 con.Open();
-                SqlCommand com = new SqlCommand("insert into tbl_books1(accession_number,book_title,book_author,book_price,book_quantity,book_purchase_date) values ('" + an + "', '" + t + "', '" + a + "', "+price+" ," + qty + ", '" + p_date + "')", con);
+                SqlCommand com = new SqlCommand("insert into tbl_books1(accession_number,book_title,book_author,book_price,book_quantity,book_purchase_date) values ('" + an + "', '" + t + "', '" + a + "', " + price + " ," + qty + ", '" + p_date + "')", con);
                 com.ExecuteNonQuery();
 
                 MessageBox.Show("Successfully SAVED!", "info", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -64,18 +64,18 @@ namespace LoginForm
             {
                 MessageBox.Show("Empty field. Please fill the fields.", "Message", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            
+
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            if(MessageBox.Show("Data will be Updated. Confirm?", "Success", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+            if (MessageBox.Show("Data will be Updated. Confirm?", "Success", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
             {
                 con.Open();
                 string no;
                 no = txtno.Text;
 
-                SqlCommand com = new SqlCommand("update tbl_books1 set book_title = '" + txttitle.Text + "', book_author='" + txtauthor.Text + "', book_price = "+txtprice.Text+", book_quantity = "+txtqty.Text+", book_purchase_date = '"+datepurchased.Text+"' where accession_number = '" + no + "'", con);
+                SqlCommand com = new SqlCommand("update tbl_books1 set book_title = '" + txttitle.Text + "', book_author='" + txtauthor.Text + "', book_price = " + txtprice.Text + ", book_quantity = " + txtqty.Text + ", book_purchase_date = '" + datepurchased.Text + "' where accession_number = '" + no + "'", con);
                 com.ExecuteNonQuery();
 
                 MessageBox.Show("Successfuly UPDATED!", "info", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -89,7 +89,7 @@ namespace LoginForm
                 con.Close();
                 loadDatagrid();
             }
-            
+
         }
 
 
