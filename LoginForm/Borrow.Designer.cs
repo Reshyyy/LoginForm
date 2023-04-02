@@ -67,14 +67,14 @@
             groupBox1.Margin = new Padding(3, 4, 3, 4);
             groupBox1.Name = "groupBox1";
             groupBox1.Padding = new Padding(3, 4, 3, 4);
-            groupBox1.Size = new Size(725, 484);
+            groupBox1.Size = new Size(725, 415);
             groupBox1.TabIndex = 3;
             groupBox1.TabStop = false;
             groupBox1.Text = "Borrow Book...";
             // 
             // btnBorrowBook
             // 
-            btnBorrowBook.Location = new Point(525, 336);
+            btnBorrowBook.Location = new Point(527, 303);
             btnBorrowBook.Margin = new Padding(3, 4, 3, 4);
             btnBorrowBook.Name = "btnBorrowBook";
             btnBorrowBook.Size = new Size(123, 59);
@@ -85,17 +85,19 @@
             // 
             // dateTimePicker
             // 
-            dateTimePicker.Location = new Point(216, 335);
+            dateTimePicker.CustomFormat = "ddddd, MMMM dd, yyyy h:mm tt";
+            dateTimePicker.Format = DateTimePickerFormat.Custom;
+            dateTimePicker.Location = new Point(218, 303);
             dateTimePicker.Margin = new Padding(3, 4, 3, 4);
             dateTimePicker.Name = "dateTimePicker";
-            dateTimePicker.Size = new Size(228, 27);
+            dateTimePicker.Size = new Size(303, 27);
             dateTimePicker.TabIndex = 13;
             // 
             // cmbBooks
             // 
             cmbBooks.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbBooks.FormattingEnabled = true;
-            cmbBooks.Location = new Point(216, 279);
+            cmbBooks.Location = new Point(218, 247);
             cmbBooks.Margin = new Padding(3, 4, 3, 4);
             cmbBooks.Name = "cmbBooks";
             cmbBooks.Size = new Size(431, 28);
@@ -104,7 +106,7 @@
             // 
             // txtEmail
             // 
-            txtEmail.Location = new Point(216, 225);
+            txtEmail.Location = new Point(218, 193);
             txtEmail.Margin = new Padding(3, 4, 3, 4);
             txtEmail.Name = "txtEmail";
             txtEmail.ReadOnly = true;
@@ -113,7 +115,7 @@
             // 
             // txtContactNumber
             // 
-            txtContactNumber.Location = new Point(216, 176);
+            txtContactNumber.Location = new Point(218, 144);
             txtContactNumber.Margin = new Padding(3, 4, 3, 4);
             txtContactNumber.MaxLength = 11;
             txtContactNumber.Name = "txtContactNumber";
@@ -123,7 +125,7 @@
             // 
             // txtDepartment
             // 
-            txtDepartment.Location = new Point(216, 123);
+            txtDepartment.Location = new Point(218, 91);
             txtDepartment.Margin = new Padding(3, 4, 3, 4);
             txtDepartment.Name = "txtDepartment";
             txtDepartment.ReadOnly = true;
@@ -132,7 +134,7 @@
             // 
             // txtStudentName
             // 
-            txtStudentName.Location = new Point(216, 72);
+            txtStudentName.Location = new Point(218, 40);
             txtStudentName.Margin = new Padding(3, 4, 3, 4);
             txtStudentName.Name = "txtStudentName";
             txtStudentName.ReadOnly = true;
@@ -143,7 +145,7 @@
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
-            label8.Location = new Point(65, 335);
+            label8.Location = new Point(67, 303);
             label8.Name = "label8";
             label8.Size = new Size(145, 25);
             label8.TabIndex = 6;
@@ -153,7 +155,7 @@
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
-            label7.Location = new Point(65, 280);
+            label7.Location = new Point(67, 248);
             label7.Name = "label7";
             label7.Size = new Size(109, 25);
             label7.TabIndex = 5;
@@ -163,7 +165,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
-            label6.Location = new Point(63, 228);
+            label6.Location = new Point(65, 196);
             label6.Name = "label6";
             label6.Size = new Size(58, 25);
             label6.TabIndex = 4;
@@ -173,7 +175,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.Location = new Point(62, 177);
+            label5.Location = new Point(64, 145);
             label5.Name = "label5";
             label5.Size = new Size(151, 25);
             label5.TabIndex = 3;
@@ -183,7 +185,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(63, 125);
+            label4.Location = new Point(65, 93);
             label4.Name = "label4";
             label4.Size = new Size(112, 25);
             label4.TabIndex = 2;
@@ -193,7 +195,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(62, 73);
+            label2.Location = new Point(64, 41);
             label2.Name = "label2";
             label2.Size = new Size(131, 25);
             label2.TabIndex = 0;
@@ -201,27 +203,29 @@
             // 
             // btnSearchStudent
             // 
+            btnSearchStudent.BackColor = SystemColors.Control;
             btnSearchStudent.Location = new Point(667, 99);
             btnSearchStudent.Margin = new Padding(3, 4, 3, 4);
             btnSearchStudent.Name = "btnSearchStudent";
             btnSearchStudent.Size = new Size(117, 53);
             btnSearchStudent.TabIndex = 12;
-            btnSearchStudent.Text = "Search Student";
-            btnSearchStudent.UseVisualStyleBackColor = true;
+            btnSearchStudent.Text = "Search Borrower";
+            btnSearchStudent.UseVisualStyleBackColor = false;
             btnSearchStudent.Click += btnSearchStudent_Click;
             // 
             // label10
             // 
             label10.AutoSize = true;
+            label10.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             label10.Location = new Point(523, 56);
             label10.Name = "label10";
-            label10.Size = new Size(104, 20);
+            label10.Size = new Size(110, 20);
             label10.TabIndex = 11;
             label10.Text = "ENTER ID NO.:";
             // 
             // txtenteridno
             // 
-            txtenteridno.Location = new Point(632, 52);
+            txtenteridno.Location = new Point(635, 52);
             txtenteridno.Margin = new Padding(3, 4, 3, 4);
             txtenteridno.Name = "txtenteridno";
             txtenteridno.Size = new Size(183, 27);
@@ -232,6 +236,8 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = Properties.Resources.istockphoto_1294409997_612x612;
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(921, 732);
             Controls.Add(btnSearchStudent);
             Controls.Add(label10);

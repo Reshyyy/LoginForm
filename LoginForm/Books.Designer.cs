@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
             groupBox1 = new GroupBox();
             txtprice = new TextBox();
             label = new Label();
@@ -51,20 +50,11 @@
             txtSearch = new TextBox();
             label5 = new Label();
             grid1 = new DataGridView();
+            lblWelcome = new Label();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)grid1).BeginInit();
             SuspendLayout();
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(39, 37);
-            label1.Name = "label1";
-            label1.Size = new Size(201, 32);
-            label1.TabIndex = 0;
-            label1.Text = "BOOKS SECTION";
             // 
             // groupBox1
             // 
@@ -295,19 +285,33 @@
             grid1.TabIndex = 0;
             grid1.CellClick += grid1_CellClick;
             // 
+            // lblWelcome
+            // 
+            lblWelcome.AutoSize = true;
+            lblWelcome.BackColor = Color.Transparent;
+            lblWelcome.Font = new Font("Lucida Calligraphy", 24F, FontStyle.Regular, GraphicsUnit.Point);
+            lblWelcome.ForeColor = Color.SlateBlue;
+            lblWelcome.Location = new Point(275, 23);
+            lblWelcome.Name = "lblWelcome";
+            lblWelcome.Size = new Size(389, 52);
+            lblWelcome.TabIndex = 8;
+            lblWelcome.Text = "BOOKS SECTION";
+            // 
             // Books
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
+            BackgroundImage = Properties.Resources.library_background_white_bookshelves_books_textbooks_learning_education_concept_d_illustration_146004771;
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(921, 920);
+            Controls.Add(lblWelcome);
             Controls.Add(groupBox2);
             Controls.Add(btnClear);
             Controls.Add(btnDelete);
             Controls.Add(btnEdit);
             Controls.Add(btnAdd);
             Controls.Add(groupBox1);
-            Controls.Add(label1);
             Margin = new Padding(3, 4, 3, 4);
             Name = "Books";
             StartPosition = FormStartPosition.CenterScreen;
@@ -323,8 +327,6 @@
         }
 
         #endregion
-
-        private Label label1;
         private GroupBox groupBox1;
         private TextBox txtauthor;
         private TextBox txttitle;
@@ -347,5 +349,6 @@
         private Label label7;
         private TextBox txtprice;
         private Label label;
+        private Label lblWelcome;
     }
 }

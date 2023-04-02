@@ -40,11 +40,16 @@
             groupBox3 = new GroupBox();
             btnFilter = new Button();
             dateTimePicker2 = new DateTimePicker();
+            groupBox4 = new GroupBox();
+            label5 = new Label();
+            btnPrint = new Button();
+            label6 = new Label();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dg_reports1).BeginInit();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dg_reports2).BeginInit();
             groupBox3.SuspendLayout();
+            groupBox4.SuspendLayout();
             SuspendLayout();
             // 
             // groupBox1
@@ -86,6 +91,7 @@
             // 
             // dg_reports2
             // 
+            dg_reports2.AllowUserToAddRows = false;
             dg_reports2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dg_reports2.Location = new Point(22, 35);
             dg_reports2.Margin = new Padding(3, 4, 3, 4);
@@ -179,11 +185,55 @@
             dateTimePicker2.Size = new Size(228, 27);
             dateTimePicker2.TabIndex = 6;
             // 
+            // groupBox4
+            // 
+            groupBox4.Controls.Add(label6);
+            groupBox4.Controls.Add(btnPrint);
+            groupBox4.Location = new Point(1185, 510);
+            groupBox4.Name = "groupBox4";
+            groupBox4.Size = new Size(267, 216);
+            groupBox4.TabIndex = 7;
+            groupBox4.TabStop = false;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label5.Location = new Point(1284, 475);
+            label5.Name = "label5";
+            label5.Size = new Size(70, 32);
+            label5.TabIndex = 8;
+            label5.Text = "Print";
+            // 
+            // btnPrint
+            // 
+            btnPrint.Location = new Point(20, 122);
+            btnPrint.Margin = new Padding(3, 4, 3, 4);
+            btnPrint.Name = "btnPrint";
+            btnPrint.Size = new Size(229, 71);
+            btnPrint.TabIndex = 8;
+            btnPrint.Text = "PRINT";
+            btnPrint.UseVisualStyleBackColor = true;
+            btnPrint.Click += btnPrint_Click;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(54, 67);
+            label6.Name = "label6";
+            label6.Size = new Size(163, 20);
+            label6.TabIndex = 9;
+            label6.Text = "Export to PDF and Print";
+            // 
             // Reports
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = Properties.Resources.non_fiction_book_report;
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1483, 919);
+            Controls.Add(label5);
+            Controls.Add(groupBox4);
             Controls.Add(label2);
             Controls.Add(groupBox3);
             Controls.Add(label1);
@@ -200,6 +250,8 @@
             ((System.ComponentModel.ISupportInitialize)dg_reports2).EndInit();
             groupBox3.ResumeLayout(false);
             groupBox3.PerformLayout();
+            groupBox4.ResumeLayout(false);
+            groupBox4.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -218,5 +270,9 @@
         private GroupBox groupBox3;
         private Button btnFilter;
         private DateTimePicker dateTimePicker2;
+        private GroupBox groupBox4;
+        private Label label6;
+        private Button btnPrint;
+        private Label label5;
     }
 }

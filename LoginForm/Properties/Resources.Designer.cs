@@ -93,9 +93,70 @@ namespace LoginForm.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap istockphoto_1153885263_612x612 {
+            get {
+                object obj = ResourceManager.GetObject("istockphoto-1153885263-612x612", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap istockphoto_1294409997_612x612 {
+            get {
+                object obj = ResourceManager.GetObject("istockphoto-1294409997-612x612", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap istockphoto_1390650788_612x612 {
+            get {
+                object obj = ResourceManager.GetObject("istockphoto-1390650788-612x612", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap istockphoto_469066880_612x612 {
+            get {
+                object obj = ResourceManager.GetObject("istockphoto-469066880-612x612", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap lain_kobeni_bg {
             get {
                 object obj = ResourceManager.GetObject("lain_kobeni_bg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap library_background_white_bookshelves_books_textbooks_learning_education_concept_d_illustration_146004771 {
+            get {
+                object obj = ResourceManager.GetObject("library-background-white-bookshelves-books-textbooks-learning-education-concept-d" +
+                        "-illustration-146004771", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap non_fiction_book_report {
+            get {
+                object obj = ResourceManager.GetObject("non_fiction_book_report", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

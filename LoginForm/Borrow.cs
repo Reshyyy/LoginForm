@@ -47,7 +47,7 @@ namespace LoginForm
                 //----------------------
                 //Code to Count how many book has been issued on this ID Number
 
-                cmd.CommandText = "select count(std_number) from BorrowBook1 where std_number = '" + eidno + "' and return_date is null";
+                cmd.CommandText = "select count(std_number) from BorrowBook2 where std_number = '" + eidno + "' and return_date is null";
                 SqlDataAdapter DA1 = new SqlDataAdapter(cmd);
                 DataSet DS1 = new DataSet();
                 DA1.Fill(DS1);
@@ -134,7 +134,7 @@ namespace LoginForm
                     {
                         SqlCommand cmd = new SqlCommand();
                         cmd.Connection = con;
-                        cmd.CommandText = "insert into BorrowBook1 (std_name,std_number,std_dept,std_contact,std_email,book_name,borrow_date) values ('" + std_name + "', '" + std_number + "',  '" + std_dept + "', " + std_contact + ", '" + std_email + "', '" + book_name + "', '" + borrow_date + "')";
+                        cmd.CommandText = "insert into BorrowBook2 (std_name,std_number,std_dept,std_contact,std_email,book_name,borrow_date) values ('" + std_name + "', '" + std_number + "',  '" + std_dept + "', " + std_contact + ", '" + std_email + "', '" + book_name + "', '" + borrow_date + "')";
                         cmd.ExecuteNonQuery();
 
                         //decrease quantity

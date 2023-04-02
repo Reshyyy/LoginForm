@@ -25,7 +25,7 @@ namespace LoginForm
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;
 
-            cmd.CommandText = "select * from BorrowBook1 where std_number = '" + txtenteridno.Text + "' and return_date IS NULL";
+            cmd.CommandText = "select * from BorrowBook2 where std_number = '" + txtenteridno.Text + "' and return_date IS NULL";
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataSet ds = new DataSet();
             da.Fill(ds);
@@ -49,7 +49,7 @@ namespace LoginForm
             cmd.Connection = con;
 
             con.Open();
-            cmd.CommandText = "update BorrowBook1 set return_date = '" + dtreturndate.Value + "' where std_number = '" + txtenteridno.Text + "' and id = " + rowid + " ";
+            cmd.CommandText = "update BorrowBook2 set return_date = '" + dtreturndate.Value + "' where std_number = '" + txtenteridno.Text + "' and id = " + rowid + " ";
             cmd.ExecuteNonQuery();
 
             //increase inventory
@@ -86,7 +86,7 @@ namespace LoginForm
 
         private void Return_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         private void gridReturn_CellContentClick(object sender, DataGridViewCellEventArgs e)

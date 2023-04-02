@@ -58,15 +58,16 @@
             // label10
             // 
             label10.AutoSize = true;
+            label10.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             label10.Location = new Point(48, 77);
             label10.Name = "label10";
-            label10.Size = new Size(104, 20);
+            label10.Size = new Size(110, 20);
             label10.TabIndex = 14;
             label10.Text = "ENTER ID NO.:";
             // 
             // txtenteridno
             // 
-            txtenteridno.Location = new Point(155, 73);
+            txtenteridno.Location = new Point(160, 73);
             txtenteridno.Margin = new Padding(3, 4, 3, 4);
             txtenteridno.Name = "txtenteridno";
             txtenteridno.Size = new Size(183, 27);
@@ -81,18 +82,18 @@
             groupBox1.Controls.Add(label8);
             groupBox1.Controls.Add(label4);
             groupBox1.Controls.Add(label2);
-            groupBox1.Location = new Point(184, 572);
+            groupBox1.Location = new Point(179, 573);
             groupBox1.Margin = new Padding(3, 4, 3, 4);
             groupBox1.Name = "groupBox1";
             groupBox1.Padding = new Padding(3, 4, 3, 4);
-            groupBox1.Size = new Size(695, 304);
+            groupBox1.Size = new Size(725, 242);
             groupBox1.TabIndex = 16;
             groupBox1.TabStop = false;
             groupBox1.Text = "Return Book...";
             // 
             // btnReturn
             // 
-            btnReturn.Location = new Point(525, 169);
+            btnReturn.Location = new Point(554, 139);
             btnReturn.Margin = new Padding(3, 4, 3, 4);
             btnReturn.Name = "btnReturn";
             btnReturn.Size = new Size(123, 59);
@@ -103,35 +104,37 @@
             // 
             // dtreturndate
             // 
-            dtreturndate.Location = new Point(216, 180);
+            dtreturndate.CustomFormat = "ddddd, MMMM dd, yyyy h:mm tt";
+            dtreturndate.Format = DateTimePickerFormat.Custom;
+            dtreturndate.Location = new Point(224, 154);
             dtreturndate.Margin = new Padding(3, 4, 3, 4);
             dtreturndate.Name = "dtreturndate";
-            dtreturndate.Size = new Size(238, 27);
+            dtreturndate.Size = new Size(315, 27);
             dtreturndate.TabIndex = 13;
             // 
             // txtBorrowedDate
             // 
-            txtBorrowedDate.Location = new Point(216, 125);
+            txtBorrowedDate.Location = new Point(224, 99);
             txtBorrowedDate.Margin = new Padding(3, 4, 3, 4);
             txtBorrowedDate.Name = "txtBorrowedDate";
             txtBorrowedDate.ReadOnly = true;
-            txtBorrowedDate.Size = new Size(431, 27);
+            txtBorrowedDate.Size = new Size(453, 27);
             txtBorrowedDate.TabIndex = 9;
             // 
             // txtBookName
             // 
-            txtBookName.Location = new Point(216, 72);
+            txtBookName.Location = new Point(224, 46);
             txtBookName.Margin = new Padding(3, 4, 3, 4);
             txtBookName.Name = "txtBookName";
             txtBookName.ReadOnly = true;
-            txtBookName.Size = new Size(431, 27);
+            txtBookName.Size = new Size(453, 27);
             txtBookName.TabIndex = 7;
             // 
             // label8
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
-            label8.Location = new Point(24, 180);
+            label8.Location = new Point(32, 154);
             label8.Name = "label8";
             label8.Size = new Size(179, 25);
             label8.TabIndex = 6;
@@ -141,7 +144,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(24, 128);
+            label4.Location = new Point(32, 102);
             label4.Name = "label4";
             label4.Size = new Size(138, 25);
             label4.TabIndex = 2;
@@ -151,7 +154,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(23, 72);
+            label2.Location = new Point(31, 46);
             label2.Name = "label2";
             label2.Size = new Size(109, 25);
             label2.TabIndex = 0;
@@ -176,7 +179,9 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1081, 939);
+            BackgroundImage = Properties.Resources.istockphoto_469066880_612x612;
+            BackgroundImageLayout = ImageLayout.Stretch;
+            ClientSize = new Size(1081, 884);
             Controls.Add(gridReturn);
             Controls.Add(groupBox1);
             Controls.Add(btnSearchStudent);
