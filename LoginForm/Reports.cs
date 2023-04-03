@@ -134,6 +134,12 @@ namespace LoginForm
         {
             exportGridToPDF(dg_reports2, "test");
         }
+
+        private void btnShowGraph_Click(object sender, EventArgs e)
+        {
+            Graph showgraph = new Graph();
+            showgraph.ShowDialog();
+        }
     }
 }
 

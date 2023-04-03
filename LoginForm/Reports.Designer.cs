@@ -41,15 +41,18 @@
             btnFilter = new Button();
             dateTimePicker2 = new DateTimePicker();
             groupBox4 = new GroupBox();
-            label5 = new Label();
-            btnPrint = new Button();
             label6 = new Label();
+            btnPrint = new Button();
+            label5 = new Label();
+            groupBox5 = new GroupBox();
+            btnShowGraph = new Button();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dg_reports1).BeginInit();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dg_reports2).BeginInit();
             groupBox3.SuspendLayout();
             groupBox4.SuspendLayout();
+            groupBox5.SuspendLayout();
             SuspendLayout();
             // 
             // groupBox1
@@ -191,9 +194,29 @@
             groupBox4.Controls.Add(btnPrint);
             groupBox4.Location = new Point(1185, 510);
             groupBox4.Name = "groupBox4";
-            groupBox4.Size = new Size(267, 216);
+            groupBox4.Size = new Size(267, 172);
             groupBox4.TabIndex = 7;
             groupBox4.TabStop = false;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(54, 36);
+            label6.Name = "label6";
+            label6.Size = new Size(163, 20);
+            label6.TabIndex = 9;
+            label6.Text = "Export to PDF and Print";
+            // 
+            // btnPrint
+            // 
+            btnPrint.Location = new Point(21, 73);
+            btnPrint.Margin = new Padding(3, 4, 3, 4);
+            btnPrint.Name = "btnPrint";
+            btnPrint.Size = new Size(229, 71);
+            btnPrint.TabIndex = 8;
+            btnPrint.Text = "PRINT";
+            btnPrint.UseVisualStyleBackColor = true;
+            btnPrint.Click += btnPrint_Click;
             // 
             // label5
             // 
@@ -205,25 +228,26 @@
             label5.TabIndex = 8;
             label5.Text = "Print";
             // 
-            // btnPrint
+            // groupBox5
             // 
-            btnPrint.Location = new Point(20, 122);
-            btnPrint.Margin = new Padding(3, 4, 3, 4);
-            btnPrint.Name = "btnPrint";
-            btnPrint.Size = new Size(229, 71);
-            btnPrint.TabIndex = 8;
-            btnPrint.Text = "PRINT";
-            btnPrint.UseVisualStyleBackColor = true;
-            btnPrint.Click += btnPrint_Click;
+            groupBox5.Controls.Add(btnShowGraph);
+            groupBox5.Location = new Point(1185, 712);
+            groupBox5.Name = "groupBox5";
+            groupBox5.Size = new Size(267, 139);
+            groupBox5.TabIndex = 9;
+            groupBox5.TabStop = false;
+            groupBox5.Text = "groupBox5";
             // 
-            // label6
+            // btnShowGraph
             // 
-            label6.AutoSize = true;
-            label6.Location = new Point(54, 67);
-            label6.Name = "label6";
-            label6.Size = new Size(163, 20);
-            label6.TabIndex = 9;
-            label6.Text = "Export to PDF and Print";
+            btnShowGraph.Location = new Point(19, 38);
+            btnShowGraph.Margin = new Padding(3, 4, 3, 4);
+            btnShowGraph.Name = "btnShowGraph";
+            btnShowGraph.Size = new Size(229, 71);
+            btnShowGraph.TabIndex = 9;
+            btnShowGraph.Text = "SHOW GRAPH";
+            btnShowGraph.UseVisualStyleBackColor = true;
+            btnShowGraph.Click += btnShowGraph_Click;
             // 
             // Reports
             // 
@@ -232,6 +256,7 @@
             BackgroundImage = Properties.Resources.non_fiction_book_report;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1483, 919);
+            Controls.Add(groupBox5);
             Controls.Add(label5);
             Controls.Add(groupBox4);
             Controls.Add(label2);
@@ -252,6 +277,7 @@
             groupBox3.PerformLayout();
             groupBox4.ResumeLayout(false);
             groupBox4.PerformLayout();
+            groupBox5.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -274,5 +300,7 @@
         private Label label6;
         private Button btnPrint;
         private Label label5;
+        private GroupBox groupBox5;
+        private Button btnShowGraph;
     }
 }

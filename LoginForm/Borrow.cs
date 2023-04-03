@@ -100,7 +100,7 @@ namespace LoginForm
         {
             if (txtStudentName.Text != "")
             {
-                if (cmbBooks.SelectedIndex != -1 && count <= 1000)
+                if (cmbBooks.SelectedIndex != -1 && count <= 2)
                 {
                     String std_name = txtStudentName.Text;
                     String std_number = txtenteridno.Text;
