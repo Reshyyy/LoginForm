@@ -127,8 +127,8 @@ namespace LoginForm
 
         private void chkShowPassword_CheckedChanged(object sender, EventArgs e)
         {
-            
-            if(chkShowPassword.Checked)
+
+            if (chkShowPassword.Checked)
             {
                 txtPassword.PasswordChar = '\0';
             }
@@ -136,6 +136,12 @@ namespace LoginForm
             {
                 txtPassword.PasswordChar = '*';
             }
+        }
+
+        private void btnDialogChangePassword_Click(object sender, EventArgs e)
+        {
+            btnChangePassword2 cp = new btnChangePassword2();
+            cp.ShowDialog();
         }
     }
 }

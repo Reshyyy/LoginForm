@@ -46,6 +46,7 @@
             label5 = new Label();
             groupBox5 = new GroupBox();
             btnShowGraph = new Button();
+            label7 = new Label();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dg_reports1).BeginInit();
             groupBox2.SuspendLayout();
@@ -192,7 +193,7 @@
             // 
             groupBox4.Controls.Add(label6);
             groupBox4.Controls.Add(btnPrint);
-            groupBox4.Location = new Point(1185, 510);
+            groupBox4.Location = new Point(1186, 488);
             groupBox4.Name = "groupBox4";
             groupBox4.Size = new Size(267, 172);
             groupBox4.TabIndex = 7;
@@ -222,7 +223,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label5.Location = new Point(1284, 475);
+            label5.Location = new Point(1285, 451);
             label5.Name = "label5";
             label5.Size = new Size(70, 32);
             label5.TabIndex = 8;
@@ -231,12 +232,11 @@
             // groupBox5
             // 
             groupBox5.Controls.Add(btnShowGraph);
-            groupBox5.Location = new Point(1185, 712);
+            groupBox5.Location = new Point(1185, 715);
             groupBox5.Name = "groupBox5";
             groupBox5.Size = new Size(267, 139);
             groupBox5.TabIndex = 9;
             groupBox5.TabStop = false;
-            groupBox5.Text = "groupBox5";
             // 
             // btnShowGraph
             // 
@@ -249,6 +249,16 @@
             btnShowGraph.UseVisualStyleBackColor = true;
             btnShowGraph.Click += btnShowGraph_Click;
             // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label7.Location = new Point(1214, 677);
+            label7.Name = "label7";
+            label7.Size = new Size(210, 32);
+            label7.TabIndex = 9;
+            label7.Text = "Simple/Graphical";
+            // 
             // Reports
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -256,6 +266,7 @@
             BackgroundImage = Properties.Resources.non_fiction_book_report;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1483, 919);
+            Controls.Add(label7);
             Controls.Add(groupBox5);
             Controls.Add(label5);
             Controls.Add(groupBox4);
@@ -302,5 +313,6 @@
         private Label label5;
         private GroupBox groupBox5;
         private Button btnShowGraph;
+        private Label label7;
     }
 }

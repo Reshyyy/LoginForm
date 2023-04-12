@@ -32,6 +32,7 @@
             btnLoginForm = new Button();
             btnRegisterForm = new Button();
             panel_Login = new Panel();
+            chkShowPassword = new CheckBox();
             btnLogin = new Button();
             txtPassword = new TextBox();
             txtUsername = new TextBox();
@@ -47,7 +48,7 @@
             lblRegCPassword = new Label();
             txtRegCPassword = new TextBox();
             panel_Register = new Panel();
-            chkShowPassword = new CheckBox();
+            btnDialogChangePassword = new Button();
             panel_Login.SuspendLayout();
             panel_Register.SuspendLayout();
             SuspendLayout();
@@ -106,6 +107,17 @@
             panel_Login.Name = "panel_Login";
             panel_Login.Size = new Size(584, 324);
             panel_Login.TabIndex = 10;
+            // 
+            // chkShowPassword
+            // 
+            chkShowPassword.AutoSize = true;
+            chkShowPassword.Location = new Point(483, 116);
+            chkShowPassword.Name = "chkShowPassword";
+            chkShowPassword.Size = new Size(67, 24);
+            chkShowPassword.TabIndex = 14;
+            chkShowPassword.Text = "Show";
+            chkShowPassword.UseVisualStyleBackColor = true;
+            chkShowPassword.CheckedChanged += chkShowPassword_CheckedChanged;
             // 
             // btnLogin
             // 
@@ -259,16 +271,15 @@
             panel_Register.Size = new Size(584, 324);
             panel_Register.TabIndex = 11;
             // 
-            // chkShowPassword
+            // btnDialogChangePassword
             // 
-            chkShowPassword.AutoSize = true;
-            chkShowPassword.Location = new Point(483, 116);
-            chkShowPassword.Name = "chkShowPassword";
-            chkShowPassword.Size = new Size(67, 24);
-            chkShowPassword.TabIndex = 14;
-            chkShowPassword.Text = "Show";
-            chkShowPassword.UseVisualStyleBackColor = true;
-            chkShowPassword.CheckedChanged += chkShowPassword_CheckedChanged;
+            btnDialogChangePassword.Location = new Point(421, 67);
+            btnDialogChangePassword.Name = "btnDialogChangePassword";
+            btnDialogChangePassword.Size = new Size(198, 37);
+            btnDialogChangePassword.TabIndex = 15;
+            btnDialogChangePassword.Text = "Change Password";
+            btnDialogChangePassword.UseVisualStyleBackColor = true;
+            btnDialogChangePassword.Click += btnDialogChangePassword_Click;
             // 
             // LoginForm
             // 
@@ -276,6 +287,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.lain_kobeni_bg;
             ClientSize = new Size(664, 540);
+            Controls.Add(btnDialogChangePassword);
             Controls.Add(panel_Login);
             Controls.Add(panel_Register);
             Controls.Add(btnRegisterForm);
@@ -317,5 +329,6 @@
         private Label lblRegUsername;
         private Button btnRegister;
         private CheckBox chkShowPassword;
+        private Button btnDialogChangePassword;
     }
 }
